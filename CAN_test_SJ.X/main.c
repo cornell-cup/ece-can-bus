@@ -10,8 +10,9 @@
 *                            Includes 
 *
 *********************************************************************/
-#include <p18cxxx.h>
+
 #include <xc.h>
+#include <p18f2480.h>
 #include "ECAN.h"
 #include "config.h"
 
@@ -19,8 +20,7 @@
 *
 *                       Config Bit Settings
 *
-*********************************************************************/
-#pragma config XINST = OFF
+**********************************************************************
 
 /*********************************************************************
 *
@@ -85,7 +85,7 @@ void InitDevice(void)
     /* Set the internal oscillator to 8MHz
      * OSCCON<6:4> = 111 */
     OSCCONbits.IRCF = 7;
-    OSCTUNEbits.PLLEN = 1;  // OSCILLATOR TUNING REGISTER
+    OSCTUNEbits.PLLEN = 0;  // PLL disabled - use 8MHz
     
     // Initialize global variables to 0
     heartbeatCount = 0;
