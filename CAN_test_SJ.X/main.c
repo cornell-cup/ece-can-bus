@@ -15,6 +15,8 @@
 #include <p18f2480.h>
 #include "ECAN.h"
 #include "config.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /*********************************************************************
 *
@@ -32,6 +34,11 @@
 #define DEVICE_OSC  8
 #define ONE_MS      (unsigned int)(DEVICE_OSC/4)*80
 
+#define clrscr()    printf( "\x1b[2J")
+#define home()      printf( "\x1b[H")
+#define pcr()       printf( '\r')
+#define crlf()      {putchar(0x0a); putchar(0x0d);}
+
 
 /*********************************************************************
 *
@@ -42,6 +49,8 @@ void InitDevice(void);
 void ECAN_Transmit();
 void Delay(unsigned int count);
 void Heartbeat(void);
+void InitUART(void);
+void putch(unsigned char byte);
 
 
 /*********************************************************************
@@ -62,15 +71,23 @@ unsigned int heartbeatCount;
 void main(void)
 {    
     InitDevice();
+    LATAbits.LATA0 = 1;
+    
+    clrscr();
+    crlf();
+    printf("Hello from Cornell Cup!\n\r");
     
     while(1)
     {
          // Transmit message
          ECAN_Transmit();
+         LATA ^= 1; // toggle RA0
+         ECAN_Receive();
+         LATA ^= 1; // toggle RA0
          // Toggle LED
-         Heartbeat();
+//         Heartbeat();
          // Delay for one millisecond 
-         Delay(ONE_MS);
+//         Delay(ONE_MS);
     }
 }
 
@@ -93,9 +110,16 @@ void InitDevice(void)
     // Initialize I/O to be digital
     ADCON1bits.PCFG = 0xF; 
     
+    // RA0 output for debugging
+    TRISAbits.TRISA0 = 0;
+    TRISAbits.TRISA3 = 1; // Input for CAN RX
+    
     // PORTB as outputs 
     LATB = 0x00;
     TRISB = 0x00;
+    
+    // Initialize UART module
+    InitUART();
   
     // Initialize CAN module
     InitECAN();
@@ -111,6 +135,8 @@ void ECAN_Transmit(void)
     // TRANSMIT BUFFER n EXTENDED IDENTIFIER REGISTERS
     TXB0EIDH = 0x00;
     TXB0EIDL = 0x00;
+    TXB0SIDH = 0x00;
+    TXB0SIDL = 0x00;    // message will transmit standard ID, EID ignored
     
     // TRANSMIT BUFFER n STANDARD IDENTIFIER REGISTERS
     CAN_TX_Adress_H = 0x32;
@@ -119,19 +145,20 @@ void ECAN_Transmit(void)
     // TRANSMIT BUFFER n DATA FIELD BYTE m REGISTERS
     // Each transmit buffer has an array of registers
     // TXBnDLC: TRANSMIT BUFFER n DATA LENGTH CODE REGISTERS
-    TXB0DLC = 0x08; // 8 bytes
+    TXB0DLC = 0x01; // 1 byte
     
-    TXB0D0=0X00;    // Write initial value
-    TXB0D1=0X01;
+    TXB0D0=0X55;    // Write initial value
+    
+    
+    TXB0D1=0XAA;  
     TXB0D2=0X02;
-    TXB0D3=0X03;
+    TXB0D3=0X03;                                                                                        
     TXB0D4=0X04;
     TXB0D5=0X05;
     TXB0D6=0X06;
     TXB0D7=0X07;
     
     TXB0CONbits.TXREQ = 1; //Set the buffer to transmit
-
     
 }
 
@@ -165,8 +192,25 @@ void Heartbeat(void)
     }
 }
 
+void InitUART(void){
+    
+    TRISCbits.TRISC6 = 0;   // RC6 = TX = output
+    
+    BAUDCONbits.BRG16 = 0;  // 8-bit baud generator
+    //From p. 237 table, using 8MHz Fosc and 9600 Baud rate
+    SPBRG = 12;
+    // actual baud rate = 9615 -> -0.16% error
+    
+    TXSTAbits.TX9 = 0;      // 8-bit data
+    TXSTAbits.TXEN = 1;     // enable transmit
+    TXSTAbits.SYNC = 0;     // asynchronous mode
+    TXSTAbits.BRGH = 0;     // low-speed mode
+    
+    RCSTAbits.SPEN = 1;     // enable serial port
 
+}
 
-
-
-
+void putch(unsigned char byte){
+    TXREG = byte;           // move to transmit buffer
+    while (TXSTAbits.TRMT == 0);  // wait for transmit completion
+}

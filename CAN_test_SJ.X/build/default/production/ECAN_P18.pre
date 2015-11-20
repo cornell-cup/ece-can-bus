@@ -17928,7 +17928,7 @@ while (CANSTAT & (0x07 << 5) != (0x04 << 5));
 ECANCON = 0x00;
 
 # 87
-CIOCONbits.ENDRHI = 0;
+CIOCONbits.ENDRHI = 1;
 
 
 CIOCONbits.CANCAP = 0;

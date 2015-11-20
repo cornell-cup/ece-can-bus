@@ -14541,9 +14541,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ECAN_P18.c: 81: ECANCON = 0x00;
 "81
 [e = _ECANCON -> -> 0 `i `uc ]
-[; ;ECAN_P18.c: 87: CIOCONbits.ENDRHI = 0;
+[; ;ECAN_P18.c: 87: CIOCONbits.ENDRHI = 1;
 "87
-[e = . . _CIOCONbits 0 2 -> -> 0 `i `uc ]
+[e = . . _CIOCONbits 0 2 -> -> 1 `i `uc ]
 [; ;ECAN_P18.c: 90: CIOCONbits.CANCAP = 0;
 "90
 [e = . . _CIOCONbits 0 1 -> -> 0 `i `uc ]

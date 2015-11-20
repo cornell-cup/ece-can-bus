@@ -1,13 +1,49 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-"41 main.c
+"48 main.c
 [v _InitDevice `(v ~T0 @X0 0 ef ]
+"28797 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f2480.h
+[s S1801 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1801 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
+"28807
+[s S1802 :1 `uc 1 ]
+[n S1802 . LA0 ]
+"28810
+[s S1803 :1 `uc 1 :1 `uc 1 ]
+[n S1803 . . LA1 ]
+"28814
+[s S1804 :2 `uc 1 :1 `uc 1 ]
+[n S1804 . . LA2 ]
+"28818
+[s S1805 :3 `uc 1 :1 `uc 1 ]
+[n S1805 . . LA3 ]
+"28822
+[s S1806 :4 `uc 1 :1 `uc 1 ]
+[n S1806 . . LA4 ]
+"28826
+[s S1807 :5 `uc 1 :1 `uc 1 ]
+[n S1807 . . LA5 ]
+"28830
+[s S1808 :6 `uc 1 :1 `uc 1 ]
+[n S1808 . . LA6 ]
+"28834
+[s S1809 :7 `uc 1 :1 `uc 1 ]
+[n S1809 . . LA7 ]
+"28796
+[u S1800 `S1801 1 `S1802 1 `S1803 1 `S1804 1 `S1805 1 `S1806 1 `S1807 1 `S1808 1 `S1809 1 ]
+[n S1800 . . . . . . . . . . ]
+"28839
+[v _LATAbits `VS1800 ~T0 @X0 0 e@3977 ]
+"195 C:\Program Files (x86)\Microchip\xc8\v1.35\include\stdio.h
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+"16 C:\Program Files (x86)\Microchip\xc8\v1.35\include\conio.h
+[v _putch `(v ~T0 @X0 0 ef1`uc ]
 "81 ECAN.h
 [v _ECAN_Transmit `(v ~T0 @X0 0 ef ]
-"44 main.c
-[v _Heartbeat `(v ~T0 @X0 0 ef ]
-"43
-[v _Delay `(v ~T0 @X0 0 ef1`ui ]
+"28791 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f2480.h
+[v _LATA `Vuc ~T0 @X0 0 e@3977 ]
+"79 ECAN.h
+[v _ECAN_Receive `(uc ~T0 @X0 0 ef ]
 "33117 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f2480.h
 [s S2041 :2 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
 [n S2041 . SCS IOFS OSTS IRCF IDLEN ]
@@ -50,16 +86,33 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1956 . . . . . . ]
 "31760
 [v _ADCON1bits `VS1956 ~T0 @X0 0 e@4033 ]
+"29198
+[s S1831 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1831 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 TRISA7 ]
+"29208
+[s S1832 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1832 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"29197
+[u S1830 `S1831 1 `S1832 1 ]
+[n S1830 . . . ]
+"29219
+[v _TRISAbits `VS1830 ~T0 @X0 0 e@3986 ]
 "28923
 [v _LATB `Vuc ~T0 @X0 0 e@3978 ]
 "29408
 [v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"52 main.c
+[v _InitUART `(v ~T0 @X0 0 ef ]
 "77 ECAN.h
 [v _InitECAN `(v ~T0 @X0 0 ef ]
 "23419 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f2480.h
 [v _TXB0EIDH `Vuc ~T0 @X0 0 e@3907 ]
 "23551
 [v _TXB0EIDL `Vuc ~T0 @X0 0 e@3908 ]
+"23183
+[v _TXB0SIDH `Vuc ~T0 @X0 0 e@3905 ]
+"23315
+[v _TXB0SIDL `Vuc ~T0 @X0 0 e@3906 ]
 "23683
 [v _TXB0DLC `Vuc ~T0 @X0 0 e@3909 ]
 "23771
@@ -139,6 +192,99 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1810 . . . . . . . . . . ]
 "28971
 [v _LATBbits `VS1810 ~T0 @X0 0 e@3978 ]
+"29640
+[s S1843 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1843 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"29650
+[s S1844 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1844 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"29639
+[u S1842 `S1843 1 `S1844 1 ]
+[n S1842 . . . ]
+"29661
+[v _TRISCbits `VS1842 ~T0 @X0 0 e@3988 ]
+"31424
+[s S1941 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1941 . ABDEN WUE . BRG16 TXCKP RXDTP RCIDL ABDOVF ]
+"31434
+[s S1942 :4 `uc 1 :1 `uc 1 ]
+[n S1942 . . SCKP ]
+"31438
+[s S1943 :5 `uc 1 :1 `uc 1 ]
+[n S1943 . . RXCKP ]
+"31442
+[s S1944 :1 `uc 1 :1 `uc 1 ]
+[n S1944 . . W4E ]
+"31423
+[u S1940 `S1941 1 `S1942 1 `S1943 1 `S1944 1 ]
+[n S1940 . . . . . ]
+"31447
+[v _BAUDCONbits `VS1940 ~T0 @X0 0 e@4024 ]
+"31230
+[v _SPBRG `Vuc ~T0 @X0 0 e@4015 ]
+"30922
+[s S1907 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1907 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"30932
+[s S1908 :2 `uc 1 :1 `uc 1 ]
+[n S1908 . . BRGH1 ]
+"30936
+[s S1909 :7 `uc 1 :1 `uc 1 ]
+[n S1909 . . CSRC1 ]
+"30940
+[s S1910 :3 `uc 1 :1 `uc 1 ]
+[n S1910 . . SENDB1 ]
+"30944
+[s S1911 :4 `uc 1 :1 `uc 1 ]
+[n S1911 . . SYNC1 ]
+"30948
+[s S1912 :1 `uc 1 :1 `uc 1 ]
+[n S1912 . . TRMT1 ]
+"30952
+[s S1913 :6 `uc 1 :1 `uc 1 ]
+[n S1913 . . TX91 ]
+"30956
+[s S1914 :1 `uc 1 ]
+[n S1914 . TX9D1 ]
+"30959
+[s S1915 :5 `uc 1 :1 `uc 1 ]
+[n S1915 . . TXEN1 ]
+"30963
+[s S1916 :6 `uc 1 :1 `uc 1 ]
+[n S1916 . . TX8_9 ]
+"30967
+[s S1917 :1 `uc 1 ]
+[n S1917 . TXD8 ]
+"30921
+[u S1906 `S1907 1 `S1908 1 `S1909 1 `S1910 1 `S1911 1 `S1912 1 `S1913 1 `S1914 1 `S1915 1 `S1916 1 `S1917 1 ]
+[n S1906 . . . . . . . . . . . . ]
+"30971
+[v _TXSTAbits `VS1906 ~T0 @X0 0 e@4012 ]
+"30713
+[s S1893 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1893 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"30723
+[s S1894 :3 `uc 1 :1 `uc 1 ]
+[n S1894 . . ADEN ]
+"30727
+[s S1895 :5 `uc 1 :1 `uc 1 ]
+[n S1895 . . SRENA ]
+"30731
+[s S1896 :6 `uc 1 :1 `uc 1 ]
+[n S1896 . . RC8_9 ]
+"30735
+[s S1897 :6 `uc 1 :1 `uc 1 ]
+[n S1897 . . RC9 ]
+"30739
+[s S1898 :1 `uc 1 ]
+[n S1898 . RCD8 ]
+"30712
+[u S1892 `S1893 1 `S1894 1 `S1895 1 `S1896 1 `S1897 1 `S1898 1 ]
+[n S1892 . . . . . . . ]
+"30743
+[v _RCSTAbits `VS1892 ~T0 @X0 0 e@4011 ]
+"31208
+[v _TXREG `Vuc ~T0 @X0 0 e@4013 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -14325,205 +14471,378 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x EBTR1=OFF ]
 "90
 [p x EBTRB=OFF ]
-[; ;main.c: 41: void InitDevice(void);
-[; ;main.c: 42: void ECAN_Transmit();
-[; ;main.c: 43: void Delay(unsigned int count);
-[; ;main.c: 44: void Heartbeat(void);
-"52 main.c
+[; ;__size_t.h: 4: typedef unsigned size_t;
+[; ;stdarg.h: 7: typedef void * va_list[1];
+[; ;stdarg.h: 10: extern void * __va_start(void);
+[; ;stdarg.h: 13: extern void * __va_arg(void *, ...);
+[; ;stdio.h: 43: struct __prbuf
+[; ;stdio.h: 44: {
+[; ;stdio.h: 45: char * ptr;
+[; ;stdio.h: 46: void (* func)(char);
+[; ;stdio.h: 47: };
+[; ;errno.h: 25: extern int errno;
+[; ;conio.h: 12: extern void init_uart(void);
+[; ;conio.h: 14: extern char getch(void);
+[; ;conio.h: 15: extern char getche(void);
+[; ;conio.h: 16: extern void putch(char);
+[; ;conio.h: 17: extern void ungetch(char);
+[; ;conio.h: 19: extern __bit kbhit(void);
+[; ;conio.h: 23: extern char * cgets(char *);
+[; ;conio.h: 24: extern void cputs(const char *);
+[; ;stdio.h: 88: extern int cprintf(char *, ...);
+[; ;stdio.h: 93: extern int _doprnt(struct __prbuf *, const register char *, register va_list);
+[; ;stdio.h: 183: extern char * gets(char *);
+[; ;stdio.h: 184: extern int puts(const char *);
+[; ;stdio.h: 185: extern int scanf(const char *, ...) __attribute__((unsupported("scanf() is not supported by this compiler")));
+[; ;stdio.h: 186: extern int sscanf(const char *, const char *, ...) __attribute__((unsupported("sscanf() is not supported by this compiler")));
+[; ;stdio.h: 187: extern int vprintf(const char *, va_list) __attribute__((unsupported("vprintf() is not supported by this compiler")));
+[; ;stdio.h: 188: extern int vsprintf(char *, const char *, va_list) __attribute__((unsupported("vsprintf() is not supported by this compiler")));
+[; ;stdio.h: 189: extern int vscanf(const char *, va_list ap) __attribute__((unsupported("vscanf() is not supported by this compiler")));
+[; ;stdio.h: 190: extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupported("vsscanf() is not supported by this compiler")));
+[; ;stdio.h: 194: extern int sprintf(char *, const char *, ...);
+[; ;stdio.h: 195: extern int printf(const char *, ...);
+[; ;stdlib.h: 7: typedef unsigned short wchar_t;
+[; ;stdlib.h: 15: typedef struct {
+[; ;stdlib.h: 16: int rem;
+[; ;stdlib.h: 17: int quot;
+[; ;stdlib.h: 18: } div_t;
+[; ;stdlib.h: 19: typedef struct {
+[; ;stdlib.h: 20: unsigned rem;
+[; ;stdlib.h: 21: unsigned quot;
+[; ;stdlib.h: 22: } udiv_t;
+[; ;stdlib.h: 23: typedef struct {
+[; ;stdlib.h: 24: long quot;
+[; ;stdlib.h: 25: long rem;
+[; ;stdlib.h: 26: } ldiv_t;
+[; ;stdlib.h: 27: typedef struct {
+[; ;stdlib.h: 28: unsigned long quot;
+[; ;stdlib.h: 29: unsigned long rem;
+[; ;stdlib.h: 30: } uldiv_t;
+[; ;stdlib.h: 53: extern double atof(const char *);
+[; ;stdlib.h: 54: extern double strtod(const char *, const char **);
+[; ;stdlib.h: 55: extern int atoi(const char *);
+[; ;stdlib.h: 56: extern unsigned xtoi(const char *);
+[; ;stdlib.h: 57: extern long atol(const char *);
+[; ;stdlib.h: 58: extern long strtol(const char *, char **, int);
+[; ;stdlib.h: 60: extern int rand(void);
+[; ;stdlib.h: 61: extern void srand(unsigned int);
+[; ;stdlib.h: 62: extern void * calloc(size_t, size_t);
+[; ;stdlib.h: 63: extern div_t div(int numer, int denom);
+[; ;stdlib.h: 64: extern udiv_t udiv(unsigned numer, unsigned denom);
+[; ;stdlib.h: 65: extern ldiv_t ldiv(long numer, long denom);
+[; ;stdlib.h: 66: extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+[; ;stdlib.h: 67: extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 68: extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 69: extern unsigned int _rotl(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 70: extern unsigned int _rotr(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 75: extern void * malloc(size_t);
+[; ;stdlib.h: 76: extern void free(void *);
+[; ;stdlib.h: 77: extern void * realloc(void *, size_t);
+[; ;stdlib.h: 86: extern int atexit(void (*)(void));
+[; ;stdlib.h: 87: extern char * getenv(const char *);
+[; ;stdlib.h: 88: extern char ** environ;
+[; ;stdlib.h: 89: extern int system(char *);
+[; ;stdlib.h: 90: extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+[; ;stdlib.h: 91: extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+[; ;stdlib.h: 92: extern int abs(int);
+[; ;stdlib.h: 93: extern long labs(long);
+[; ;stdlib.h: 95: extern char * itoa(char * buf, int val, int base);
+[; ;stdlib.h: 96: extern char * utoa(char * buf, unsigned val, int base);
+[; ;stdlib.h: 101: extern char * ltoa(char * buf, long val, int base);
+[; ;stdlib.h: 102: extern char * ultoa(char * buf, unsigned long val, int base);
+[; ;stdlib.h: 104: extern char * ftoa(float f, int * status);
+[; ;main.c: 48: void InitDevice(void);
+[; ;main.c: 49: void ECAN_Transmit();
+[; ;main.c: 50: void Delay(unsigned int count);
+[; ;main.c: 51: void Heartbeat(void);
+[; ;main.c: 52: void InitUART(void);
+[; ;main.c: 53: void putch(unsigned char byte);
+"61 main.c
 [v _CAN_TX_Adress_H `uc ~T0 @X0 1 e ]
 [v _CAN_TX_Adress_L `uc ~T0 @X0 1 e ]
-[; ;main.c: 52: char CAN_TX_Adress_H,CAN_TX_Adress_L;
-"53
+[; ;main.c: 61: char CAN_TX_Adress_H,CAN_TX_Adress_L;
+"62
 [v _CAN_RX_Adress_H `uc ~T0 @X0 1 e ]
 [v _CAN_RX_Adress_L `uc ~T0 @X0 1 e ]
-[; ;main.c: 53: char CAN_RX_Adress_H,CAN_RX_Adress_L;
-"54
-[v _heartbeatCount `ui ~T0 @X0 1 e ]
-[; ;main.c: 54: unsigned int heartbeatCount;
-"62
-[v _main `(v ~T0 @X0 1 ef ]
+[; ;main.c: 62: char CAN_RX_Adress_H,CAN_RX_Adress_L;
 "63
+[v _heartbeatCount `ui ~T0 @X0 1 e ]
+[; ;main.c: 63: unsigned int heartbeatCount;
+"71
+[v _main `(v ~T0 @X0 1 ef ]
+"72
 {
-[; ;main.c: 62: void main(void)
-[; ;main.c: 63: {
+[; ;main.c: 71: void main(void)
+[; ;main.c: 72: {
 [e :U _main ]
 [f ]
-[; ;main.c: 64: InitDevice();
-"64
-[e ( _InitDevice ..  ]
-[; ;main.c: 66: while(1)
-"66
-[e :U 2070 ]
-[; ;main.c: 67: {
-"67
-{
-[; ;main.c: 69: ECAN_Transmit();
-"69
-[e ( _ECAN_Transmit ..  ]
-[; ;main.c: 71: Heartbeat();
-"71
-[e ( _Heartbeat ..  ]
-[; ;main.c: 73: Delay((unsigned int)(8/4)*80);
+[; ;main.c: 73: InitDevice();
 "73
-[e ( _Delay (1 * -> / -> 8 `i -> 4 `i `ui -> -> 80 `i `ui ]
+[e ( _InitDevice ..  ]
+[; ;main.c: 74: LATAbits.LATA0 = 1;
 "74
+[e = . . _LATAbits 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 76: printf( "\x1b[2J");
+"76
+[e ( _printf :s 1C ]
+[; ;main.c: 77: {putch(0x0a); putch(0x0d);};
+"77
+{
+[e ( _putch (1 -> -> 10 `i `uc ]
+[e ( _putch (1 -> -> 13 `i `uc ]
 }
-[e :U 2069 ]
-"66
-[e $U 2070  ]
-[e :U 2071 ]
-[; ;main.c: 74: }
-[; ;main.c: 75: }
-"75
-[e :UE 2068 ]
-}
+[; ;main.c: 78: printf("Hello from Cornell Cup!\n\r");
+"78
+[e ( _printf :s 2C ]
+[; ;main.c: 80: while(1)
+"80
+[e :U 2075 ]
+[; ;main.c: 81: {
+"81
+{
+[; ;main.c: 83: ECAN_Transmit();
 "83
-[v _InitDevice `(v ~T0 @X0 1 ef ]
+[e ( _ECAN_Transmit ..  ]
+[; ;main.c: 84: LATA ^= 1;
 "84
-{
-[; ;main.c: 83: void InitDevice(void)
-[; ;main.c: 84: {
-[e :U _InitDevice ]
-[f ]
-[; ;main.c: 87: OSCCONbits.IRCF = 7;
-"87
-[e = . . _OSCCONbits 0 3 -> -> 7 `i `uc ]
-[; ;main.c: 88: OSCTUNEbits.PLLEN = 0;
-"88
-[e = . . _OSCTUNEbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 91: heartbeatCount = 0;
+[e =^ _LATA -> -> 1 `i `uc ]
+[; ;main.c: 85: ECAN_Receive();
+"85
+[e ( _ECAN_Receive ..  ]
+[; ;main.c: 86: LATA ^= 1;
+"86
+[e =^ _LATA -> -> 1 `i `uc ]
 "91
-[e = _heartbeatCount -> -> 0 `i `ui ]
-[; ;main.c: 94: ADCON1bits.PCFG = 0xF;
-"94
-[e = . . _ADCON1bits 0 0 -> -> 15 `i `uc ]
-[; ;main.c: 97: LATB = 0x00;
-"97
-[e = _LATB -> -> 0 `i `uc ]
-[; ;main.c: 98: TRISB = 0x00;
-"98
-[e = _TRISB -> -> 0 `i `uc ]
-[; ;main.c: 101: InitECAN();
-"101
-[e ( _InitECAN ..  ]
-[; ;main.c: 102: }
-"102
-[e :UE 2072 ]
 }
-"109
-[v _ECAN_Transmit `(v ~T0 @X0 1 ef ]
-"110
-{
-[; ;main.c: 109: void ECAN_Transmit(void)
-[; ;main.c: 110: {
-[e :U _ECAN_Transmit ]
-[f ]
-[; ;main.c: 112: TXB0EIDH = 0x00;
-"112
-[e = _TXB0EIDH -> -> 0 `i `uc ]
-[; ;main.c: 113: TXB0EIDL = 0x00;
-"113
-[e = _TXB0EIDL -> -> 0 `i `uc ]
-[; ;main.c: 116: CAN_TX_Adress_H = 0x32;
-"116
-[e = _CAN_TX_Adress_H -> -> 50 `i `uc ]
-[; ;main.c: 117: CAN_TX_Adress_L = 0xC0;
-"117
-[e = _CAN_TX_Adress_L -> -> 192 `i `uc ]
-[; ;main.c: 122: TXB0DLC = 0x08;
-"122
-[e = _TXB0DLC -> -> 8 `i `uc ]
-[; ;main.c: 124: TXB0D0=0X00;
-"124
-[e = _TXB0D0 -> -> 0 `i `uc ]
-[; ;main.c: 125: TXB0D1=0X01;
-"125
-[e = _TXB0D1 -> -> 1 `i `uc ]
-[; ;main.c: 126: TXB0D2=0X02;
-"126
-[e = _TXB0D2 -> -> 2 `i `uc ]
-[; ;main.c: 127: TXB0D3=0X03;
-"127
-[e = _TXB0D3 -> -> 3 `i `uc ]
-[; ;main.c: 128: TXB0D4=0X04;
-"128
-[e = _TXB0D4 -> -> 4 `i `uc ]
-[; ;main.c: 129: TXB0D5=0X05;
-"129
-[e = _TXB0D5 -> -> 5 `i `uc ]
-[; ;main.c: 130: TXB0D6=0X06;
-"130
-[e = _TXB0D6 -> -> 6 `i `uc ]
-[; ;main.c: 131: TXB0D7=0X07;
-"131
-[e = _TXB0D7 -> -> 7 `i `uc ]
-[; ;main.c: 133: TXB0CONbits.TXREQ = 1;
-"133
-[e = . . _TXB0CONbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 136: }
-"136
-[e :UE 2073 ]
-}
-"143
-[v _Delay `(v ~T0 @X0 1 ef1`ui ]
-"144
-{
-[; ;main.c: 143: void Delay(unsigned int count)
-[; ;main.c: 144: {
-[e :U _Delay ]
-"143
-[v _count `ui ~T0 @X0 1 r1 ]
-"144
-[f ]
-[; ;main.c: 146: while(count--);
-"146
+[e :U 2074 ]
+"80
 [e $U 2075  ]
 [e :U 2076 ]
-[e :U 2075 ]
-[e $ != -- _count -> -> 1 `i `ui -> -> 0 `i `ui 2076  ]
-[e :U 2077 ]
-[; ;main.c: 147: }
-"147
-[e :UE 2074 ]
+[; ;main.c: 91: }
+[; ;main.c: 92: }
+"92
+[e :UE 2073 ]
 }
-"154
-[v _Heartbeat `(v ~T0 @X0 1 ef ]
-"155
+"100
+[v _InitDevice `(v ~T0 @X0 1 ef ]
+"101
 {
-[; ;main.c: 154: void Heartbeat(void)
-[; ;main.c: 155: {
-[e :U _Heartbeat ]
+[; ;main.c: 100: void InitDevice(void)
+[; ;main.c: 101: {
+[e :U _InitDevice ]
 [f ]
-[; ;main.c: 157: if (heartbeatCount < 255)
-"157
-[e $ ! < _heartbeatCount -> -> 255 `i `ui 2079  ]
-[; ;main.c: 158: {
-"158
-{
-[; ;main.c: 159: heartbeatCount++;
-"159
-[e ++ _heartbeatCount -> -> 1 `i `ui ]
-"160
-}
-[; ;main.c: 160: }
-[e $U 2080  ]
-"161
-[e :U 2079 ]
-[; ;main.c: 161: else
-[; ;main.c: 162: {
-"162
-{
-[; ;main.c: 163: heartbeatCount = 0;
-"163
+[; ;main.c: 104: OSCCONbits.IRCF = 7;
+"104
+[e = . . _OSCCONbits 0 3 -> -> 7 `i `uc ]
+[; ;main.c: 105: OSCTUNEbits.PLLEN = 0;
+"105
+[e = . . _OSCTUNEbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 108: heartbeatCount = 0;
+"108
 [e = _heartbeatCount -> -> 0 `i `ui ]
-[; ;main.c: 164: LATBbits.LATB7 ^= 1;
-"164
-[e =^ . . _LATBbits 0 7 -> -> 1 `i `uc ]
-"165
+[; ;main.c: 111: ADCON1bits.PCFG = 0xF;
+"111
+[e = . . _ADCON1bits 0 0 -> -> 15 `i `uc ]
+[; ;main.c: 114: TRISAbits.TRISA0 = 0;
+"114
+[e = . . _TRISAbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 115: TRISAbits.TRISA3 = 1;
+"115
+[e = . . _TRISAbits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 118: LATB = 0x00;
+"118
+[e = _LATB -> -> 0 `i `uc ]
+[; ;main.c: 119: TRISB = 0x00;
+"119
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;main.c: 122: InitUART();
+"122
+[e ( _InitUART ..  ]
+[; ;main.c: 125: InitECAN();
+"125
+[e ( _InitECAN ..  ]
+[; ;main.c: 126: }
+"126
+[e :UE 2077 ]
 }
-[e :U 2080 ]
-[; ;main.c: 165: }
-[; ;main.c: 166: }
-"166
+"133
+[v _ECAN_Transmit `(v ~T0 @X0 1 ef ]
+"134
+{
+[; ;main.c: 133: void ECAN_Transmit(void)
+[; ;main.c: 134: {
+[e :U _ECAN_Transmit ]
+[f ]
+[; ;main.c: 136: TXB0EIDH = 0x00;
+"136
+[e = _TXB0EIDH -> -> 0 `i `uc ]
+[; ;main.c: 137: TXB0EIDL = 0x00;
+"137
+[e = _TXB0EIDL -> -> 0 `i `uc ]
+[; ;main.c: 138: TXB0SIDH = 0x00;
+"138
+[e = _TXB0SIDH -> -> 0 `i `uc ]
+[; ;main.c: 139: TXB0SIDL = 0x00;
+"139
+[e = _TXB0SIDL -> -> 0 `i `uc ]
+[; ;main.c: 142: CAN_TX_Adress_H = 0x32;
+"142
+[e = _CAN_TX_Adress_H -> -> 50 `i `uc ]
+[; ;main.c: 143: CAN_TX_Adress_L = 0xC0;
+"143
+[e = _CAN_TX_Adress_L -> -> 192 `i `uc ]
+[; ;main.c: 148: TXB0DLC = 0x01;
+"148
+[e = _TXB0DLC -> -> 1 `i `uc ]
+[; ;main.c: 150: TXB0D0=0X55;
+"150
+[e = _TXB0D0 -> -> 85 `i `uc ]
+[; ;main.c: 153: TXB0D1=0XAA;
+"153
+[e = _TXB0D1 -> -> 170 `i `uc ]
+[; ;main.c: 154: TXB0D2=0X02;
+"154
+[e = _TXB0D2 -> -> 2 `i `uc ]
+[; ;main.c: 155: TXB0D3=0X03;
+"155
+[e = _TXB0D3 -> -> 3 `i `uc ]
+[; ;main.c: 156: TXB0D4=0X04;
+"156
+[e = _TXB0D4 -> -> 4 `i `uc ]
+[; ;main.c: 157: TXB0D5=0X05;
+"157
+[e = _TXB0D5 -> -> 5 `i `uc ]
+[; ;main.c: 158: TXB0D6=0X06;
+"158
+[e = _TXB0D6 -> -> 6 `i `uc ]
+[; ;main.c: 159: TXB0D7=0X07;
+"159
+[e = _TXB0D7 -> -> 7 `i `uc ]
+[; ;main.c: 161: TXB0CONbits.TXREQ = 1;
+"161
+[e = . . _TXB0CONbits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 163: }
+"163
 [e :UE 2078 ]
 }
+"170
+[v _Delay `(v ~T0 @X0 1 ef1`ui ]
+"171
+{
+[; ;main.c: 170: void Delay(unsigned int count)
+[; ;main.c: 171: {
+[e :U _Delay ]
+"170
+[v _count `ui ~T0 @X0 1 r1 ]
+"171
+[f ]
+[; ;main.c: 173: while(count--);
+"173
+[e $U 2080  ]
+[e :U 2081 ]
+[e :U 2080 ]
+[e $ != -- _count -> -> 1 `i `ui -> -> 0 `i `ui 2081  ]
+[e :U 2082 ]
+[; ;main.c: 174: }
+"174
+[e :UE 2079 ]
+}
+"181
+[v _Heartbeat `(v ~T0 @X0 1 ef ]
+"182
+{
+[; ;main.c: 181: void Heartbeat(void)
+[; ;main.c: 182: {
+[e :U _Heartbeat ]
+[f ]
+[; ;main.c: 184: if (heartbeatCount < 255)
+"184
+[e $ ! < _heartbeatCount -> -> 255 `i `ui 2084  ]
+[; ;main.c: 185: {
+"185
+{
+[; ;main.c: 186: heartbeatCount++;
+"186
+[e ++ _heartbeatCount -> -> 1 `i `ui ]
+"187
+}
+[; ;main.c: 187: }
+[e $U 2085  ]
+"188
+[e :U 2084 ]
+[; ;main.c: 188: else
+[; ;main.c: 189: {
+"189
+{
+[; ;main.c: 190: heartbeatCount = 0;
+"190
+[e = _heartbeatCount -> -> 0 `i `ui ]
+[; ;main.c: 191: LATBbits.LATB7 ^= 1;
+"191
+[e =^ . . _LATBbits 0 7 -> -> 1 `i `uc ]
+"192
+}
+[e :U 2085 ]
+[; ;main.c: 192: }
+[; ;main.c: 193: }
+"193
+[e :UE 2083 ]
+}
+"195
+[v _InitUART `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 195: void InitUART(void){
+[e :U _InitUART ]
+[f ]
+[; ;main.c: 197: TRISCbits.TRISC6 = 0;
+"197
+[e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
+[; ;main.c: 199: BAUDCONbits.BRG16 = 0;
+"199
+[e = . . _BAUDCONbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 201: SPBRG = 12;
+"201
+[e = _SPBRG -> -> 12 `i `uc ]
+[; ;main.c: 204: TXSTAbits.TX9 = 0;
+"204
+[e = . . _TXSTAbits 0 6 -> -> 0 `i `uc ]
+[; ;main.c: 205: TXSTAbits.TXEN = 1;
+"205
+[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
+[; ;main.c: 206: TXSTAbits.SYNC = 0;
+"206
+[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 207: TXSTAbits.BRGH = 0;
+"207
+[e = . . _TXSTAbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 209: RCSTAbits.SPEN = 1;
+"209
+[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
+[; ;main.c: 211: }
+"211
+[e :UE 2086 ]
+}
+"213
+[v _putch `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;main.c: 213: void putch(unsigned char byte){
+[e :U _putch ]
+[v _byte `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;main.c: 214: TXREG = byte;
+"214
+[e = _TXREG _byte ]
+[; ;main.c: 215: while (TXSTAbits.TRMT == 0);
+"215
+[e $U 2088  ]
+[e :U 2089 ]
+[e :U 2088 ]
+[e $ == -> . . _TXSTAbits 0 1 `i -> 0 `i 2089  ]
+[e :U 2090 ]
+[; ;main.c: 216: }
+"216
+[e :UE 2087 ]
+}
+[p f _printf 8388608 ]
+[a 1C 27 91 50 74 0 ]
+[a 2C 72 101 108 108 111 32 102 114 111 109 32 67 111 114 110 101 108 108 32 67 117 112 33 10 13 0 ]

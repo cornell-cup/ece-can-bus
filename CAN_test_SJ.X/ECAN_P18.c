@@ -14,7 +14,7 @@
 *                            Includes 
 *
 *********************************************************************/
-#include <p18cxxx.h>
+#include <p18f2480.h>
 #include <xc.h>
 #include "ECAN.h"
 #include "config.h"
@@ -83,8 +83,8 @@ void InitECAN(void)
 //-------------------------------------------------------------------    
 // Step 3: Configure IO control    
 //-------------------------------------------------------------------    
-    // CANTX pin will be tri-state when recessive
-    CIOCONbits.ENDRHI = 0;  
+    // CANTX pin will drive VDD when recessive
+    CIOCONbits.ENDRHI = 1;  
     
     // Disable CAN capture, RC2/CCP1 input to CCP1 module
     CIOCONbits.CANCAP = 0;  
@@ -94,7 +94,7 @@ void InitECAN(void)
 //-------------------------------------------------------------------   
     /* 1 Mbps @ 8MHz
      * FOSC = 8MHz, BRP<5:0> = 00h, TQ = (2*1)/8 = 0.25 us
-     * Nominal Bit Time = 4TQ, TBIT = 4 * 0.25 = 1 ?s (10^-6s)
+     * Nominal Bit Time = 4TQ, TBIT = 4 * 0.25 = 1 us (10^-6s)
      * Nominal Bit Rate = 1/10^-6 = 10^6 bits/s (1 Mb/s) */
     BRGCON1 = 0xC0;  /* Sync_Seg(bit7-6)=1TQ, BRP(bit5-0)=1,
                       * TQ=((2*(BRP+1))/Fosc=4/4M=1us */
