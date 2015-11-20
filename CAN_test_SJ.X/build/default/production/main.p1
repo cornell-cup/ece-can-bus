@@ -42,9 +42,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ECAN_Transmit `(v ~T0 @X0 0 ef ]
 "28791 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f2480.h
 [v _LATA `Vuc ~T0 @X0 0 e@3977 ]
-"79 ECAN.h
-[v _ECAN_Receive `(uc ~T0 @X0 0 ef ]
-"33117 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f2480.h
+"33117
 [s S2041 :2 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
 [n S2041 . SCS IOFS OSTS IRCF IDLEN ]
 "33124
@@ -97,10 +95,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1830 . . . ]
 "29219
 [v _TRISAbits `VS1830 ~T0 @X0 0 e@3986 ]
-"28923
-[v _LATB `Vuc ~T0 @X0 0 e@3978 ]
-"29408
-[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"29419
+[s S1837 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1837 . TRISB0 TRISB1 TRISB2 TRISB3 TRISB4 TRISB5 TRISB6 TRISB7 ]
+"29429
+[s S1838 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1838 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"29418
+[u S1836 `S1837 1 `S1838 1 ]
+[n S1836 . . . ]
+"29440
+[v _TRISBbits `VS1836 ~T0 @X0 0 e@3987 ]
 "52 main.c
 [v _InitUART `(v ~T0 @X0 0 ef ]
 "77 ECAN.h
@@ -113,24 +118,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TXB0SIDH `Vuc ~T0 @X0 0 e@3905 ]
 "23315
 [v _TXB0SIDL `Vuc ~T0 @X0 0 e@3906 ]
-"23683
-[v _TXB0DLC `Vuc ~T0 @X0 0 e@3909 ]
-"23771
-[v _TXB0D0 `Vuc ~T0 @X0 0 e@3910 ]
-"23832
-[v _TXB0D1 `Vuc ~T0 @X0 0 e@3911 ]
-"23893
-[v _TXB0D2 `Vuc ~T0 @X0 0 e@3912 ]
-"23954
-[v _TXB0D3 `Vuc ~T0 @X0 0 e@3913 ]
-"24015
-[v _TXB0D4 `Vuc ~T0 @X0 0 e@3914 ]
-"24076
-[v _TXB0D5 `Vuc ~T0 @X0 0 e@3915 ]
-"24137
-[v _TXB0D6 `Vuc ~T0 @X0 0 e@3916 ]
-"24198
-[v _TXB0D7 `Vuc ~T0 @X0 0 e@3917 ]
 "23071
 [s S1478 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1478 . TXPRI0 TXPRI1 . TXREQ TXERR TXLARB TXABT TXBIF ]
@@ -160,38 +147,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1477 . . . . . . . . . ]
 "23109
 [v _TXB0CONbits `VS1477 ~T0 @X0 0 e@3904 ]
-"28929
-[s S1811 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1811 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
-"28939
-[s S1812 :1 `uc 1 ]
-[n S1812 . LB0 ]
-"28942
-[s S1813 :1 `uc 1 :1 `uc 1 ]
-[n S1813 . . LB1 ]
-"28946
-[s S1814 :2 `uc 1 :1 `uc 1 ]
-[n S1814 . . LB2 ]
-"28950
-[s S1815 :3 `uc 1 :1 `uc 1 ]
-[n S1815 . . LB3 ]
-"28954
-[s S1816 :4 `uc 1 :1 `uc 1 ]
-[n S1816 . . LB4 ]
-"28958
-[s S1817 :5 `uc 1 :1 `uc 1 ]
-[n S1817 . . LB5 ]
-"28962
-[s S1818 :6 `uc 1 :1 `uc 1 ]
-[n S1818 . . LB6 ]
-"28966
-[s S1819 :7 `uc 1 :1 `uc 1 ]
-[n S1819 . . LB7 ]
-"28928
-[u S1810 `S1811 1 `S1812 1 `S1813 1 `S1814 1 `S1815 1 `S1816 1 `S1817 1 `S1818 1 `S1819 1 ]
-[n S1810 . . . . . . . . . . ]
-"28971
-[v _LATBbits `VS1810 ~T0 @X0 0 e@3978 ]
+"23683
+[v _TXB0DLC `Vuc ~T0 @X0 0 e@3909 ]
+"23771
+[v _TXB0D0 `Vuc ~T0 @X0 0 e@3910 ]
+"23832
+[v _TXB0D1 `Vuc ~T0 @X0 0 e@3911 ]
+"23893
+[v _TXB0D2 `Vuc ~T0 @X0 0 e@3912 ]
+"23954
+[v _TXB0D3 `Vuc ~T0 @X0 0 e@3913 ]
+"24015
+[v _TXB0D4 `Vuc ~T0 @X0 0 e@3914 ]
+"24076
+[v _TXB0D5 `Vuc ~T0 @X0 0 e@3915 ]
+"24137
+[v _TXB0D6 `Vuc ~T0 @X0 0 e@3916 ]
+"24198
+[v _TXB0D7 `Vuc ~T0 @X0 0 e@3917 ]
 "29640
 [s S1843 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S1843 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
@@ -14606,242 +14579,195 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 84: LATA ^= 1;
 "84
 [e =^ _LATA -> -> 1 `i `uc ]
-[; ;main.c: 85: ECAN_Receive();
-"85
-[e ( _ECAN_Receive ..  ]
-[; ;main.c: 86: LATA ^= 1;
-"86
-[e =^ _LATA -> -> 1 `i `uc ]
-"91
+"104
 }
 [e :U 2074 ]
 "80
 [e $U 2075  ]
 [e :U 2076 ]
-[; ;main.c: 91: }
-[; ;main.c: 92: }
-"92
+[; ;main.c: 104: }
+[; ;main.c: 105: }
+"105
 [e :UE 2073 ]
 }
-"100
+"113
 [v _InitDevice `(v ~T0 @X0 1 ef ]
-"101
+"114
 {
-[; ;main.c: 100: void InitDevice(void)
-[; ;main.c: 101: {
+[; ;main.c: 113: void InitDevice(void)
+[; ;main.c: 114: {
 [e :U _InitDevice ]
 [f ]
-[; ;main.c: 104: OSCCONbits.IRCF = 7;
-"104
+[; ;main.c: 117: OSCCONbits.IRCF = 7;
+"117
 [e = . . _OSCCONbits 0 3 -> -> 7 `i `uc ]
-[; ;main.c: 105: OSCTUNEbits.PLLEN = 0;
-"105
-[e = . . _OSCTUNEbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 108: heartbeatCount = 0;
-"108
-[e = _heartbeatCount -> -> 0 `i `ui ]
-[; ;main.c: 111: ADCON1bits.PCFG = 0xF;
-"111
-[e = . . _ADCON1bits 0 0 -> -> 15 `i `uc ]
-[; ;main.c: 114: TRISAbits.TRISA0 = 0;
-"114
-[e = . . _TRISAbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 115: TRISAbits.TRISA3 = 1;
-"115
-[e = . . _TRISAbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 118: LATB = 0x00;
+[; ;main.c: 118: OSCTUNEbits.PLLEN = 0;
 "118
-[e = _LATB -> -> 0 `i `uc ]
-[; ;main.c: 119: TRISB = 0x00;
-"119
-[e = _TRISB -> -> 0 `i `uc ]
-[; ;main.c: 122: InitUART();
-"122
+[e = . . _OSCTUNEbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 121: heartbeatCount = 0;
+"121
+[e = _heartbeatCount -> -> 0 `i `ui ]
+[; ;main.c: 124: ADCON1bits.PCFG = 0xF;
+"124
+[e = . . _ADCON1bits 0 0 -> -> 15 `i `uc ]
+[; ;main.c: 127: TRISAbits.TRISA0 = 0;
+"127
+[e = . . _TRISAbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 130: TRISBbits.TRISB2 = 0;
+"130
+[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 131: TRISBbits.TRISB3 = 1;
+"131
+[e = . . _TRISBbits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 134: InitUART();
+"134
 [e ( _InitUART ..  ]
-[; ;main.c: 125: InitECAN();
-"125
+[; ;main.c: 137: InitECAN();
+"137
 [e ( _InitECAN ..  ]
-[; ;main.c: 126: }
-"126
+[; ;main.c: 138: }
+"138
 [e :UE 2077 ]
 }
-"133
+"145
 [v _ECAN_Transmit `(v ~T0 @X0 1 ef ]
-"134
+"146
 {
-[; ;main.c: 133: void ECAN_Transmit(void)
-[; ;main.c: 134: {
+[; ;main.c: 145: void ECAN_Transmit(void)
+[; ;main.c: 146: {
 [e :U _ECAN_Transmit ]
 [f ]
-[; ;main.c: 136: TXB0EIDH = 0x00;
-"136
-[e = _TXB0EIDH -> -> 0 `i `uc ]
-[; ;main.c: 137: TXB0EIDL = 0x00;
-"137
-[e = _TXB0EIDL -> -> 0 `i `uc ]
-[; ;main.c: 138: TXB0SIDH = 0x00;
-"138
-[e = _TXB0SIDH -> -> 0 `i `uc ]
-[; ;main.c: 139: TXB0SIDL = 0x00;
-"139
-[e = _TXB0SIDL -> -> 0 `i `uc ]
-[; ;main.c: 142: CAN_TX_Adress_H = 0x32;
-"142
-[e = _CAN_TX_Adress_H -> -> 50 `i `uc ]
-[; ;main.c: 143: CAN_TX_Adress_L = 0xC0;
-"143
-[e = _CAN_TX_Adress_L -> -> 192 `i `uc ]
-[; ;main.c: 148: TXB0DLC = 0x01;
+[; ;main.c: 148: TXB0EIDH = 0x00;
 "148
-[e = _TXB0DLC -> -> 1 `i `uc ]
-[; ;main.c: 150: TXB0D0=0X55;
+[e = _TXB0EIDH -> -> 0 `i `uc ]
+[; ;main.c: 149: TXB0EIDL = 0x00;
+"149
+[e = _TXB0EIDL -> -> 0 `i `uc ]
+[; ;main.c: 150: TXB0SIDH = 0x55;
 "150
-[e = _TXB0D0 -> -> 85 `i `uc ]
-[; ;main.c: 153: TXB0D1=0XAA;
-"153
-[e = _TXB0D1 -> -> 170 `i `uc ]
-[; ;main.c: 154: TXB0D2=0X02;
+[e = _TXB0SIDH -> -> 85 `i `uc ]
+[; ;main.c: 151: TXB0SIDL = 0x00;
+"151
+[e = _TXB0SIDL -> -> 0 `i `uc ]
+[; ;main.c: 154: CAN_TX_Adress_H = 0x32;
 "154
-[e = _TXB0D2 -> -> 2 `i `uc ]
-[; ;main.c: 155: TXB0D3=0X03;
+[e = _CAN_TX_Adress_H -> -> 50 `i `uc ]
+[; ;main.c: 155: CAN_TX_Adress_L = 0xC0;
 "155
-[e = _TXB0D3 -> -> 3 `i `uc ]
-[; ;main.c: 156: TXB0D4=0X04;
-"156
-[e = _TXB0D4 -> -> 4 `i `uc ]
-[; ;main.c: 157: TXB0D5=0X05;
-"157
-[e = _TXB0D5 -> -> 5 `i `uc ]
-[; ;main.c: 158: TXB0D6=0X06;
-"158
-[e = _TXB0D6 -> -> 6 `i `uc ]
-[; ;main.c: 159: TXB0D7=0X07;
+[e = _CAN_TX_Adress_L -> -> 192 `i `uc ]
+[; ;main.c: 159: TXB0CONbits.TXREQ = 0;
 "159
+[e = . . _TXB0CONbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 164: TXB0DLC = 0x01;
+"164
+[e = _TXB0DLC -> -> 1 `i `uc ]
+[; ;main.c: 166: TXB0D0=0X55;
+"166
+[e = _TXB0D0 -> -> 85 `i `uc ]
+[; ;main.c: 169: TXB0D1=0XAA;
+"169
+[e = _TXB0D1 -> -> 170 `i `uc ]
+[; ;main.c: 170: TXB0D2=0X02;
+"170
+[e = _TXB0D2 -> -> 2 `i `uc ]
+[; ;main.c: 171: TXB0D3=0X03;
+"171
+[e = _TXB0D3 -> -> 3 `i `uc ]
+[; ;main.c: 172: TXB0D4=0X04;
+"172
+[e = _TXB0D4 -> -> 4 `i `uc ]
+[; ;main.c: 173: TXB0D5=0X05;
+"173
+[e = _TXB0D5 -> -> 5 `i `uc ]
+[; ;main.c: 174: TXB0D6=0X06;
+"174
+[e = _TXB0D6 -> -> 6 `i `uc ]
+[; ;main.c: 175: TXB0D7=0X07;
+"175
 [e = _TXB0D7 -> -> 7 `i `uc ]
-[; ;main.c: 161: TXB0CONbits.TXREQ = 1;
-"161
+[; ;main.c: 177: TXB0CONbits.TXREQ = 1;
+"177
 [e = . . _TXB0CONbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 163: }
-"163
+[; ;main.c: 179: }
+"179
 [e :UE 2078 ]
 }
-"170
+"186
 [v _Delay `(v ~T0 @X0 1 ef1`ui ]
-"171
+"187
 {
-[; ;main.c: 170: void Delay(unsigned int count)
-[; ;main.c: 171: {
+[; ;main.c: 186: void Delay(unsigned int count)
+[; ;main.c: 187: {
 [e :U _Delay ]
-"170
+"186
 [v _count `ui ~T0 @X0 1 r1 ]
-"171
+"187
 [f ]
-[; ;main.c: 173: while(count--);
-"173
+[; ;main.c: 189: while(count--);
+"189
 [e $U 2080  ]
 [e :U 2081 ]
 [e :U 2080 ]
 [e $ != -- _count -> -> 1 `i `ui -> -> 0 `i `ui 2081  ]
 [e :U 2082 ]
-[; ;main.c: 174: }
-"174
+[; ;main.c: 190: }
+"190
 [e :UE 2079 ]
 }
-"181
-[v _Heartbeat `(v ~T0 @X0 1 ef ]
-"182
-{
-[; ;main.c: 181: void Heartbeat(void)
-[; ;main.c: 182: {
-[e :U _Heartbeat ]
-[f ]
-[; ;main.c: 184: if (heartbeatCount < 255)
-"184
-[e $ ! < _heartbeatCount -> -> 255 `i `ui 2084  ]
-[; ;main.c: 185: {
-"185
-{
-[; ;main.c: 186: heartbeatCount++;
-"186
-[e ++ _heartbeatCount -> -> 1 `i `ui ]
-"187
-}
-[; ;main.c: 187: }
-[e $U 2085  ]
-"188
-[e :U 2084 ]
-[; ;main.c: 188: else
-[; ;main.c: 189: {
-"189
-{
-[; ;main.c: 190: heartbeatCount = 0;
-"190
-[e = _heartbeatCount -> -> 0 `i `ui ]
-[; ;main.c: 191: LATBbits.LATB7 ^= 1;
-"191
-[e =^ . . _LATBbits 0 7 -> -> 1 `i `uc ]
 "192
-}
-[e :U 2085 ]
-[; ;main.c: 192: }
-[; ;main.c: 193: }
-"193
-[e :UE 2083 ]
-}
-"195
 [v _InitUART `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 195: void InitUART(void){
+[; ;main.c: 192: void InitUART(void){
 [e :U _InitUART ]
 [f ]
-[; ;main.c: 197: TRISCbits.TRISC6 = 0;
-"197
+[; ;main.c: 194: TRISCbits.TRISC6 = 0;
+"194
 [e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
-[; ;main.c: 199: BAUDCONbits.BRG16 = 0;
-"199
+[; ;main.c: 196: BAUDCONbits.BRG16 = 0;
+"196
 [e = . . _BAUDCONbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 201: SPBRG = 12;
-"201
+[; ;main.c: 198: SPBRG = 12;
+"198
 [e = _SPBRG -> -> 12 `i `uc ]
-[; ;main.c: 204: TXSTAbits.TX9 = 0;
-"204
+[; ;main.c: 201: TXSTAbits.TX9 = 0;
+"201
 [e = . . _TXSTAbits 0 6 -> -> 0 `i `uc ]
-[; ;main.c: 205: TXSTAbits.TXEN = 1;
-"205
+[; ;main.c: 202: TXSTAbits.TXEN = 1;
+"202
 [e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
-[; ;main.c: 206: TXSTAbits.SYNC = 0;
-"206
+[; ;main.c: 203: TXSTAbits.SYNC = 0;
+"203
 [e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 207: TXSTAbits.BRGH = 0;
-"207
+[; ;main.c: 204: TXSTAbits.BRGH = 0;
+"204
 [e = . . _TXSTAbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 209: RCSTAbits.SPEN = 1;
-"209
+[; ;main.c: 206: RCSTAbits.SPEN = 1;
+"206
 [e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
-[; ;main.c: 211: }
-"211
-[e :UE 2086 ]
+[; ;main.c: 208: }
+"208
+[e :UE 2083 ]
 }
-"213
+"210
 [v _putch `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;main.c: 213: void putch(unsigned char byte){
+[; ;main.c: 210: void putch(unsigned char byte){
 [e :U _putch ]
 [v _byte `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;main.c: 214: TXREG = byte;
-"214
+[; ;main.c: 211: TXREG = byte;
+"211
 [e = _TXREG _byte ]
-[; ;main.c: 215: while (TXSTAbits.TRMT == 0);
-"215
-[e $U 2088  ]
-[e :U 2089 ]
-[e :U 2088 ]
-[e $ == -> . . _TXSTAbits 0 1 `i -> 0 `i 2089  ]
-[e :U 2090 ]
-[; ;main.c: 216: }
-"216
-[e :UE 2087 ]
+[; ;main.c: 212: while (TXSTAbits.TRMT == 0);
+"212
+[e $U 2085  ]
+[e :U 2086 ]
+[e :U 2085 ]
+[e $ == -> . . _TXSTAbits 0 1 `i -> 0 `i 2086  ]
+[e :U 2087 ]
+[; ;main.c: 213: }
+"213
+[e :UE 2084 ]
 }
 [p f _printf 8388608 ]
 [a 1C 27 91 50 74 0 ]

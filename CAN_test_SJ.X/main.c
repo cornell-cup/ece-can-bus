@@ -32,7 +32,7 @@
 #define TRUE        1
 #define FALSE       0
 #define DEVICE_OSC  8
-#define ONE_MS      (unsigned int)(DEVICE_OSC/4)*80
+#define ONE_MS      666 //(unsigned int)(DEVICE_OSC/4)*80
 
 #define clrscr()    printf( "\x1b[2J")
 #define home()      printf( "\x1b[H")
@@ -82,12 +82,25 @@ void main(void)
          // Transmit message
          ECAN_Transmit();
          LATA ^= 1; // toggle RA0
-         ECAN_Receive();
-         LATA ^= 1; // toggle RA0
+         
+#ifdef debug_canerr
+//         int i;
+//         for (i=0; i<500;i++)
+//             Delay(ONE_MS);
+         
+//         if (TXB0CONbits.TXREQ){
+//             printf("Error: TXB0CON = %d\n", TXB0CON);
+//             printf("TXABT = %d, TXLARB = %d, TXERR = %d\n\r",
+//                     TXB0CONbits.TXABT,
+//                     TXB0CONbits.TXLARB,
+//                     TXB0CONbits.TXERR);
+//         }
+//         ECAN_Receive();
+//         LATA ^= 1; // toggle RA0
          // Toggle LED
-//         Heartbeat();
-         // Delay for one millisecond 
-//         Delay(ONE_MS);
+#endif
+         
+         
     }
 }
 
@@ -112,11 +125,10 @@ void InitDevice(void)
     
     // RA0 output for debugging
     TRISAbits.TRISA0 = 0;
-    TRISAbits.TRISA3 = 1; // Input for CAN RX
     
-    // PORTB as outputs 
-    LATB = 0x00;
-    TRISB = 0x00;
+    // CAN TX, RX
+    TRISBbits.TRISB2 = 0;   // Output for CAN TX
+    TRISBbits.TRISB3 = 1;   // Input for CAN RX
     
     // Initialize UART module
     InitUART();
@@ -135,12 +147,16 @@ void ECAN_Transmit(void)
     // TRANSMIT BUFFER n EXTENDED IDENTIFIER REGISTERS
     TXB0EIDH = 0x00;
     TXB0EIDL = 0x00;
-    TXB0SIDH = 0x00;
+    TXB0SIDH = 0x55;
     TXB0SIDL = 0x00;    // message will transmit standard ID, EID ignored
     
     // TRANSMIT BUFFER n STANDARD IDENTIFIER REGISTERS
     CAN_TX_Adress_H = 0x32;
     CAN_TX_Adress_L = 0xC0;
+    
+    // So that the MCU has write access to message buffer in case
+    // TXREQ wasn't already set low
+    TXB0CONbits.TXREQ = 0;  
     
     // TRANSMIT BUFFER n DATA FIELD BYTE m REGISTERS
     // Each transmit buffer has an array of registers
@@ -173,25 +189,6 @@ void Delay(unsigned int count)
     while(count--);
 }    
 
-/*********************************************************************
-*
-*             Toggle LED to show device is working 
-*
-*********************************************************************/
-void Heartbeat(void)
-{
-    // Toggle LED every 256th time this function is called
-    if (heartbeatCount < 255)
-    {
-        heartbeatCount++;
-    }
-    else
-    {
-        heartbeatCount = 0;
-        LATBbits.LATB7 ^= 1;
-    }
-}
-
 void InitUART(void){
     
     TRISCbits.TRISC6 = 0;   // RC6 = TX = output
@@ -214,3 +211,4 @@ void putch(unsigned char byte){
     TXREG = byte;           // move to transmit buffer
     while (TXSTAbits.TRMT == 0);  // wait for transmit completion
 }
+

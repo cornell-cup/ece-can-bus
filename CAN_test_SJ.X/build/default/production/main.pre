@@ -18057,20 +18057,16 @@ while(1)
 
 ECAN_Transmit();
 LATA ^= 1;
-ECAN_Receive();
-LATA ^= 1;
 
-
-
-
+# 104
 }
 }
 
-# 100
+# 113
 void InitDevice(void)
 {
 
-# 104
+# 117
 OSCCONbits.IRCF = 7;
 OSCTUNEbits.PLLEN = 0;
 
@@ -18082,11 +18078,10 @@ ADCON1bits.PCFG = 0xF;
 
 
 TRISAbits.TRISA0 = 0;
-TRISAbits.TRISA3 = 1;
 
 
-LATB = 0x00;
-TRISB = 0x00;
+TRISBbits.TRISB2 = 0;
+TRISBbits.TRISB3 = 1;
 
 
 InitUART();
@@ -18095,18 +18090,22 @@ InitUART();
 InitECAN();
 }
 
-# 133
+# 145
 void ECAN_Transmit(void)
 {
 
 TXB0EIDH = 0x00;
 TXB0EIDL = 0x00;
-TXB0SIDH = 0x00;
+TXB0SIDH = 0x55;
 TXB0SIDL = 0x00;
 
 
 CAN_TX_Adress_H = 0x32;
 CAN_TX_Adress_L = 0xC0;
+
+
+
+TXB0CONbits.TXREQ = 0;
 
 
 
@@ -18128,26 +18127,11 @@ TXB0CONbits.TXREQ = 1;
 
 }
 
-# 170
+# 186
 void Delay(unsigned int count)
 {
 
 while(count--);
-}
-
-# 181
-void Heartbeat(void)
-{
-
-if (heartbeatCount < 255)
-{
-heartbeatCount++;
-}
-else
-{
-heartbeatCount = 0;
-LATBbits.LATB7 ^= 1;
-}
 }
 
 void InitUART(void){
@@ -18172,3 +18156,4 @@ void putch(unsigned char byte){
 TXREG = byte;
 while (TXSTAbits.TRMT == 0);
 }
+
