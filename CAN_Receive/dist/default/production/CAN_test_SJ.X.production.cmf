@@ -1,0 +1,539 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.obj
+idloc IDLOC 0 200000 200000 8 1
+end_init CODE 0 0 0 4 1
+config CONFIG 0 300000 300000 E 1
+$dist/default/production\CAN_test_SJ.X.production.obj
+cinit CODE 0 4A0 4A0 1A 1
+text0 CODE 0 41A 41A 34 1
+text1 CODE 0 44E 44E 2A 1
+text2 CODE 0 4CE 4CE C 1
+text3 CODE 0 478 478 28 1
+text4 CODE 0 4BA 4BA 14 1
+text5 CODE 0 322 322 98 1
+text6 CODE 0 3BA 3BA 60 1
+cstackCOMRAM COMRAM 1 14 14 6 1
+smallconst SMALLCONST 0 300 300 22 1
+bssCOMRAM COMRAM 1 1 1 13 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 60-2FF 1
+SFR D00-FFF 1
+BANK0 60-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+CONST 4-2FF 1
+CONST 4DA-3FFF 1
+STACK 60-2FF 1
+SMALLCONST 4DA-3FFF 1
+CODE 4-2FF 1
+CODE 4DA-3FFF 1
+BIGRAM 1A-2FF 1
+COMRAM 1A-5F 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 4DA-3FFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\CAN_test_SJ.X.production.obj
+3BA text6 CODE >145:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+3BA text6 CODE >148:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+3C0 text6 CODE >149:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+3C6 text6 CODE >150:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+3CC text6 CODE >151:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+3D2 text6 CODE >154:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+3D6 text6 CODE >155:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+3DA text6 CODE >159:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+3DE text6 CODE >164:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+3E4 text6 CODE >166:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+3EA text6 CODE >169:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+3F0 text6 CODE >170:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+3F6 text6 CODE >171:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+3FC text6 CODE >172:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+402 text6 CODE >173:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+408 text6 CODE >174:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+40E text6 CODE >175:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+414 text6 CODE >177:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+418 text6 CODE >179:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+322 text5 CODE >66:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+322 text5 CODE >72:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+326 text5 CODE >75:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+32A text5 CODE >81:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+32E text5 CODE >87:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+330 text5 CODE >90:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+332 text5 CODE >99:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+336 text5 CODE >101:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+33A text5 CODE >103:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+33E text5 CODE >113:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+344 text5 CODE >114:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+34A text5 CODE >115:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+34E text5 CODE >116:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+354 text5 CODE >119:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+35A text5 CODE >120:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+360 text5 CODE >121:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+364 text5 CODE >122:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+36A text5 CODE >126:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+370 text5 CODE >127:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+376 text5 CODE >133:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+37C text5 CODE >134:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+382 text5 CODE >135:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+388 text5 CODE >136:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+38E text5 CODE >137:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+394 text5 CODE >138:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+39A text5 CODE >139:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+3A0 text5 CODE >140:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+3A6 text5 CODE >146:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+3AA text5 CODE >147:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+3AE text5 CODE >150:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+3B2 text5 CODE >151:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+3B8 text5 CODE >153:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
+4BA text4 CODE >192:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+4BA text4 CODE >194:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+4BC text4 CODE >196:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+4BE text4 CODE >198:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+4C2 text4 CODE >201:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+4C4 text4 CODE >202:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+4C6 text4 CODE >203:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+4C8 text4 CODE >204:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+4CA text4 CODE >206:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+4CC text4 CODE >208:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+478 text3 CODE >113:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+478 text3 CODE >117:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+47E text3 CODE >118:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+480 text3 CODE >121:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+488 text3 CODE >124:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+490 text3 CODE >127:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+492 text3 CODE >130:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+494 text3 CODE >131:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+496 text3 CODE >134:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+49A text3 CODE >137:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+49E text3 CODE >138:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+4CE text2 CODE >210:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+4D0 text2 CODE >211:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+4D4 text2 CODE >212:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+44E text1 CODE >464:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\doprnt.c
+44E text1 CODE >533:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\doprnt.c
+456 text1 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\doprnt.c
+458 text1 CODE >541:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\doprnt.c
+45E text1 CODE >536:C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\doprnt.c
+41A text0 CODE >71:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+41A text0 CODE >73:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+41E text0 CODE >74:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+420 text0 CODE >76:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+42C text0 CODE >77:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+438 text0 CODE >78:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+444 text0 CODE >80:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+444 text0 CODE >83:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+448 text0 CODE >84:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+44C text0 CODE >80:D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
+4A0 cinit CODE >2061:C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.
+4A0 cinit CODE >2063:C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.
+4A0 cinit CODE >2066:C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.
+4A0 cinit CODE >2131:C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.
+4A4 cinit CODE >2132:C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.
+4A6 cinit CODE >2133:C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.
+4A6 cinit CODE >2134:C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.
+4A8 cinit CODE >2135:C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.
+4AA cinit CODE >2136:C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.
+4AC cinit CODE >2142:C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.
+4AC cinit CODE >2145:C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.
+4AE cinit CODE >2146:C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.
+4B0 cinit CODE >2147:C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.
+4B2 cinit CODE >2148:C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.
+4B4 cinit CODE >2149:C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.
+4B6 cinit CODE >2150:C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+putch@byte 14 0 COMRAM 1 cstackCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\CAN_test_SJ.X.production.obj
+__Hspace_0 30000E 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Hspace_1 1A 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Hspace_2 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXM0EIDH F1A 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXM0EIDL F1B 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXM0SIDH F18 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXM0SIDL F19 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXM1EIDH F1E 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXM1EIDL F1F 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXM1SIDH F1C 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXM1SIDL F1D 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\CAN_test_SJ.X.production.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.obj
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\CAN_test_SJ.X.production.obj
+_InitDevice 478 0 CODE 0 text3 dist/default/production\CAN_test_SJ.X.production.obj
+__Lsmallconst 300 0 SMALLCONST 0 smallconst dist/default/production\CAN_test_SJ.X.production.obj
+_B0D0 E26 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_B0D1 E27 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_B0D2 E28 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_B0D3 E29 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_B0D4 E2A 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_B0D5 E2B 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_B0D6 E2C 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_B0D7 E2D 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_LATA F89 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.obj
+_main 41A 0 CODE 0 text0 dist/default/production\CAN_test_SJ.X.production.obj
+start 0 0 CODE 0 init C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.obj
+__CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__size_of_main 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+__Hpowerup 0 0 CODE 0 powerup dist/default/production\CAN_test_SJ.X.production.obj
+printf@c 19 0 COMRAM 1 cstackCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+printf@f 15 0 COMRAM 1 cstackCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+__accesstop 60 0 ABS 0 - C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.obj
+intlevel0 0 0 CODE 0 text C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.obj
+intlevel1 0 0 CODE 0 text C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.obj
+intlevel2 0 0 CODE 0 text C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.obj
+intlevel3 0 0 CODE 0 text C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.obj
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+_OSCCONbits FD3 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\CAN_test_SJ.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\CAN_test_SJ.X.production.obj
+__end_of_InitDevice 4A0 0 CODE 0 text3 dist/default/production\CAN_test_SJ.X.production.obj
+_B0EIDH E23 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_B0EIDL E24 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_B0SIDH E21 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_B0SIDL E22 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.obj
+_CANCON F6F 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\CAN_test_SJ.X.production.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\CAN_test_SJ.X.production.obj
+_TXB0DLC F45 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_BAUDCONbits FB8 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\CAN_test_SJ.X.production.obj
+?_printf 15 0 COMRAM 1 cstackCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+__Hintcodelo 0 0 CODE 0 intcodelo dist/default/production\CAN_test_SJ.X.production.obj
+_OSCTUNEbits F9B 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_ECAN_Transmit 3BA 0 CODE 0 text6 dist/default/production\CAN_test_SJ.X.production.obj
+__size_of_putch 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Lintcodelo 0 0 CODE 0 intcodelo dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+start_initialization 4A0 0 CODE 0 cinit dist/default/production\CAN_test_SJ.X.production.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\CAN_test_SJ.X.production.obj
+_TRISAbits F92 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_TRISBbits F93 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_TRISCbits F94 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+___rparam_used 1 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB0D0 F66 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB0D1 F67 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB0D2 F68 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB0D3 F69 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB0D4 F6A 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB0D5 F6B 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB0D6 F6C 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB0D7 F6D 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB1D0 F56 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB1D1 F57 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB1D2 F58 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB1D3 F59 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB1D4 F5A 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB1D5 F5B 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB1D6 F5C 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB1D7 F5D 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB1IF 7D21 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_WDTPS$32768 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_TXB0D0 F46 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_TXB0D1 F47 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_TXB0D2 F48 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_TXB0D3 F49 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_TXB0D4 F4A 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_TXB0D5 F4B 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_TXB0D6 F4C 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_TXB0D7 F4D 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__end_of_printf 478 0 CODE 0 text1 dist/default/production\CAN_test_SJ.X.production.obj
+_heartbeatCount 1 0 COMRAM 1 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+__Hbank0 0 0 ABS 0 bank0 dist/default/production\CAN_test_SJ.X.production.obj
+__Hbank1 0 0 ABS 0 bank1 dist/default/production\CAN_test_SJ.X.production.obj
+__Hbank2 0 0 ABS 0 bank2 dist/default/production\CAN_test_SJ.X.production.obj
+__Hcinit 0 0 ABS 0 cinit dist/default/production\CAN_test_SJ.X.production.obj
+__Hconst 0 0 CODE 0 const dist/default/production\CAN_test_SJ.X.production.obj
+__Hidata 0 0 CODE 0 idata dist/default/production\CAN_test_SJ.X.production.obj
+__Hidloc 200008 0 IDLOC 0 idloc dist/default/production\CAN_test_SJ.X.production.obj
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\CAN_test_SJ.X.production.obj
+__Hparam 0 0 COMRAM 1 rparam dist/default/production\CAN_test_SJ.X.production.obj
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\CAN_test_SJ.X.production.obj
+__Hstack 0 0 STACK 2 stack dist/default/production\CAN_test_SJ.X.production.obj
+__Htext0 0 0 ABS 0 text0 dist/default/production\CAN_test_SJ.X.production.obj
+__Htext1 0 0 ABS 0 text1 dist/default/production\CAN_test_SJ.X.production.obj
+__Htext2 0 0 ABS 0 text2 dist/default/production\CAN_test_SJ.X.production.obj
+__Htext3 0 0 ABS 0 text3 dist/default/production\CAN_test_SJ.X.production.obj
+__Htext4 0 0 ABS 0 text4 dist/default/production\CAN_test_SJ.X.production.obj
+__Htext5 0 0 ABS 0 text5 dist/default/production\CAN_test_SJ.X.production.obj
+__Htext6 0 0 ABS 0 text6 dist/default/production\CAN_test_SJ.X.production.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\CAN_test_SJ.X.production.obj
+__Hbigram 0 0 ABS 0 bigram dist/default/production\CAN_test_SJ.X.production.obj
+__smallconst 300 0 SMALLCONST 0 smallconst C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.obj
+__Hcomram 0 0 ABS 0 comram dist/default/production\CAN_test_SJ.X.production.obj
+__Hconfig 30000E 0 CONFIG 0 config dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Lbank0 0 0 ABS 0 bank0 dist/default/production\CAN_test_SJ.X.production.obj
+__Lbank1 0 0 ABS 0 bank1 dist/default/production\CAN_test_SJ.X.production.obj
+__Lbank2 0 0 ABS 0 bank2 dist/default/production\CAN_test_SJ.X.production.obj
+__Lcinit 0 0 ABS 0 cinit dist/default/production\CAN_test_SJ.X.production.obj
+__Lconst 0 0 CODE 0 const dist/default/production\CAN_test_SJ.X.production.obj
+__Lidata 0 0 CODE 0 idata dist/default/production\CAN_test_SJ.X.production.obj
+__Lidloc 200000 0 IDLOC 0 idloc dist/default/production\CAN_test_SJ.X.production.obj
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\CAN_test_SJ.X.production.obj
+__Lparam 0 0 COMRAM 1 rparam dist/default/production\CAN_test_SJ.X.production.obj
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\CAN_test_SJ.X.production.obj
+__Lstack 0 0 STACK 2 stack dist/default/production\CAN_test_SJ.X.production.obj
+__Ltext0 0 0 ABS 0 text0 dist/default/production\CAN_test_SJ.X.production.obj
+__Ltext1 0 0 ABS 0 text1 dist/default/production\CAN_test_SJ.X.production.obj
+__Ltext2 0 0 ABS 0 text2 dist/default/production\CAN_test_SJ.X.production.obj
+__Ltext3 0 0 ABS 0 text3 dist/default/production\CAN_test_SJ.X.production.obj
+__Ltext4 0 0 ABS 0 text4 dist/default/production\CAN_test_SJ.X.production.obj
+__Ltext5 0 0 ABS 0 text5 dist/default/production\CAN_test_SJ.X.production.obj
+__Ltext6 0 0 ABS 0 text6 dist/default/production\CAN_test_SJ.X.production.obj
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\CAN_test_SJ.X.production.obj
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\CAN_test_SJ.X.production.obj
+__Habs1 0 0 ABS 0 abs1 dist/default/production\CAN_test_SJ.X.production.obj
+__Hdata 0 0 ABS 0 data dist/default/production\CAN_test_SJ.X.production.obj
+__Hinit 0 0 CODE 0 init dist/default/production\CAN_test_SJ.X.production.obj
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\CAN_test_SJ.X.production.obj
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\CAN_test_SJ.X.production.obj
+__Htemp 0 0 COMRAM 1 temp dist/default/production\CAN_test_SJ.X.production.obj
+__Htext 0 0 ABS 0 text dist/default/production\CAN_test_SJ.X.production.obj
+__Labs1 0 0 ABS 0 abs1 dist/default/production\CAN_test_SJ.X.production.obj
+__Ldata 0 0 ABS 0 data dist/default/production\CAN_test_SJ.X.production.obj
+__Linit 0 0 CODE 0 init dist/default/production\CAN_test_SJ.X.production.obj
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\CAN_test_SJ.X.production.obj
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\CAN_test_SJ.X.production.obj
+__Ltemp 0 0 COMRAM 1 temp dist/default/production\CAN_test_SJ.X.production.obj
+__Ltext 0 0 ABS 0 text dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_XINST$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__size_of_ECAN_Transmit 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_CIOCONbits F73 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+__Hintret 0 0 ABS 0 intret dist/default/production\CAN_test_SJ.X.production.obj
+__Hirdata 0 0 CODE 0 irdata dist/default/production\CAN_test_SJ.X.production.obj
+__size_of_InitECAN 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__size_of_InitUART 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__S0 30000E 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__S1 1A 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__S2 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__size_of_InitDevice 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_OSC$IRCIO67 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_PBADEN$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_temp_EIDH 10 0 COMRAM 1 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+_temp_EIDL 11 0 COMRAM 1 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+_temp_SIDH 12 0 COMRAM 1 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+_temp_SIDL 13 0 COMRAM 1 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\CAN_test_SJ.X.production.obj
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\CAN_test_SJ.X.production.obj
+_ECANCON F77 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__end_of_ECAN_Transmit 41A 0 CODE 0 text6 dist/default/production\CAN_test_SJ.X.production.obj
+__Lintentry 0 0 ABS 0 intentry dist/default/production\CAN_test_SJ.X.production.obj
+__Hramtop 300 0 RAM 0 ramtop dist/default/production\CAN_test_SJ.X.production.obj
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production\CAN_test_SJ.X.production.obj
+__activetblptr 1 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_BBSIZ$1024 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RCSTAbits FAB 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_InitECAN 322 0 CODE 0 text5 dist/default/production\CAN_test_SJ.X.production.obj
+_InitUART 4BA 0 CODE 0 text4 dist/default/production\CAN_test_SJ.X.production.obj
+_temp_DLC F 0 COMRAM 1 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\CAN_test_SJ.X.production.obj
+__Lbigram 0 0 ABS 0 bigram dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_BORV$0 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Lcomram 0 0 ABS 0 comram dist/default/production\CAN_test_SJ.X.production.obj
+__Lconfig 300000 0 CONFIG 0 config dist/default/production\CAN_test_SJ.X.production.obj
+_printf 44E 0 CODE 0 text1 dist/default/production\CAN_test_SJ.X.production.obj
+_RXB0CON F60 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB0DLC F65 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB1CON F50 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB1DLC F55 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXFCON0 DD4 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXFCON1 DD5 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__end_of_InitECAN 3BA 0 CODE 0 text5 dist/default/production\CAN_test_SJ.X.production.obj
+__end_of_InitUART 4CE 0 CODE 0 text4 dist/default/production\CAN_test_SJ.X.production.obj
+_LATAbits F89 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\CAN_test_SJ.X.production.obj
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\CAN_test_SJ.X.production.obj
+stackhi 2FF 0 ABS 0 - C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.obj
+stacklo 60 0 ABS 0 - C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.obj
+__Lintcode 0 0 CODE 0 intcode dist/default/production\CAN_test_SJ.X.production.obj
+__Lintret 0 0 ABS 0 intret dist/default/production\CAN_test_SJ.X.production.obj
+__Lirdata 0 0 CODE 0 irdata dist/default/production\CAN_test_SJ.X.production.obj
+_ADCON1bits FC1 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Lspace_0 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Lspace_1 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Lspace_2 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__pbssCOMRAM 1 0 COMRAM 1 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+__Lend_init 0 0 CODE 0 end_init dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_LVP$ON 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+printf@ap 17 0 COMRAM 1 cstackCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+end_of_initialization 4AC 0 CODE 0 cinit dist/default/production\CAN_test_SJ.X.production.obj
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\CAN_test_SJ.X.production.obj
+__Hintentry 0 0 ABS 0 intentry dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__size_of_printf 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Hreset_vec 0 0 CODE 0 reset_vec dist/default/production\CAN_test_SJ.X.production.obj
+_RXB1CONbits F50 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Lramtop 300 0 RAM 0 ramtop dist/default/production\CAN_test_SJ.X.production.obj
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production\CAN_test_SJ.X.production.obj
+_BRGCON1 F70 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_BRGCON2 F71 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_BRGCON3 F72 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_TXB0EIDH F43 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_TXB0EIDL F44 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_TXB0SIDH F41 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_TXB0SIDL F42 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__pcinit 4A0 0 CODE 0 cinit dist/default/production\CAN_test_SJ.X.production.obj
+__ptext0 41A 0 CODE 0 text0 dist/default/production\CAN_test_SJ.X.production.obj
+__ptext1 44E 0 CODE 0 text1 dist/default/production\CAN_test_SJ.X.production.obj
+__ptext2 4CE 0 CODE 0 text2 dist/default/production\CAN_test_SJ.X.production.obj
+__ptext3 478 0 CODE 0 text3 dist/default/production\CAN_test_SJ.X.production.obj
+__ptext4 4BA 0 CODE 0 text4 dist/default/production\CAN_test_SJ.X.production.obj
+__ptext5 322 0 CODE 0 text5 dist/default/production\CAN_test_SJ.X.production.obj
+__ptext6 3BA 0 CODE 0 text6 dist/default/production\CAN_test_SJ.X.production.obj
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\CAN_test_SJ.X.production.obj
+__ramtop 300 0 RAM 0 ramtop C:\Users\CORNEL~1\AppData\Local\Temp\s7f8.obj
+__Lpowerup 0 0 CODE 0 powerup dist/default/production\CAN_test_SJ.X.production.obj
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\CAN_test_SJ.X.production.obj
+__psmallconst 300 0 SMALLCONST 0 smallconst dist/default/production\CAN_test_SJ.X.production.obj
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\CAN_test_SJ.X.production.obj
+___param_bank 10 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB0CONbits F60 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_WDT$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\CAN_test_SJ.X.production.obj
+__end_of__initialization 4AC 0 CODE 0 cinit dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_CAN_RX_Adress_H 3 0 COMRAM 1 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+_CAN_RX_Adress_L 4 0 COMRAM 1 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\CAN_test_SJ.X.production.obj
+_TXB0CONbits F40 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__pcstackCOMRAM 14 0 COMRAM 1 cstackCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+_TXSTAbits FAC 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Hend_init 4 0 CODE 0 end_init dist/default/production\CAN_test_SJ.X.production.obj
+_CAN_TX_Adress_H 5 0 COMRAM 1 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+_CAN_TX_Adress_L 6 0 COMRAM 1 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_PWRT$ON 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__end_of_main 44E 0 CODE 0 text0 dist/default/production\CAN_test_SJ.X.production.obj
+_B0DLC E25 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_CANSTAT F6E 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_SPBRG FAF 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_TXREG FAD 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__end_of_putch 4DA 0 CODE 0 text2 dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_CP0$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_CP1$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__HRAM 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Hbss 0 0 RAM 1 bss dist/default/production\CAN_test_SJ.X.production.obj
+__Hram 0 0 ABS 0 ram dist/default/production\CAN_test_SJ.X.production.obj
+__Hsfr 0 0 ABS 0 sfr dist/default/production\CAN_test_SJ.X.production.obj
+__LRAM 1 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Lbss 0 0 RAM 1 bss dist/default/production\CAN_test_SJ.X.production.obj
+__Lram 0 0 ABS 0 ram dist/default/production\CAN_test_SJ.X.production.obj
+__Lsfr 0 0 ABS 0 sfr dist/default/production\CAN_test_SJ.X.production.obj
+_RXB0EIDH F63 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB0EIDL F64 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB0SIDH F61 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB0SIDL F62 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB1EIDH F53 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB1EIDL F54 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB1SIDH F51 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXB1SIDL F52 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_CPB$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_B0CONbits E20 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_putch 4CE 0 CODE 0 text2 dist/default/production\CAN_test_SJ.X.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__initialization 4A0 0 CODE 0 cinit dist/default/production\CAN_test_SJ.X.production.obj
+_RXF0EIDH F02 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXF0EIDL F03 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXF0SIDH F00 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXF0SIDL F01 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXF2EIDH F0A 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXF2EIDL F0B 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXF2SIDH F08 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+_RXF2SIDL F09 0 ABS 0 - dist/default/production\CAN_test_SJ.X.production.obj
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\CAN_test_SJ.X.production.obj
+__Hsmallconst 322 0 SMALLCONST 0 smallconst dist/default/production\CAN_test_SJ.X.production.obj
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\CAN_test_SJ.X.production.obj
+_temp_D0 7 0 COMRAM 1 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+_temp_D1 8 0 COMRAM 1 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+_temp_D2 9 0 COMRAM 1 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+_temp_D3 A 0 COMRAM 1 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+_temp_D4 B 0 COMRAM 1 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+_temp_D5 C 0 COMRAM 1 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+_temp_D6 D 0 COMRAM 1 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+_temp_D7 E 0 COMRAM 1 bssCOMRAM dist/default/production\CAN_test_SJ.X.production.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\CAN_test_SJ.X.production.obj
+__Hintcode 0 0 CODE 0 intcode dist/default/production\CAN_test_SJ.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+idloc 0 200000 200000 8 1
+text5 0 322 322 1B8 1
+reset_vec 0 0 0 4 1
+smallconst 0 300 300 22 1
+bssCOMRAM 1 1 1 19 1
+config 0 300000 300000 E 1
