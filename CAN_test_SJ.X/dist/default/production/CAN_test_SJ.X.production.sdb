@@ -3,29 +3,29 @@
 [d edition pro ]
 [d chip 18F2480 ]
 [d frameptr 4065 ]
-"62 /Applications/microchip/xc8/v1.35/sources/common/float.c
+"62 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
-"86 /Applications/microchip/xc8/v1.35/sources/common/ftadd.c
+"86 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"54 /Applications/microchip/xc8/v1.35/sources/common/ftdiv.c
+"54 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftdiv.c
 [v ___ftdiv __ftdiv `(f  1 e 3 0 ]
-"62 /Applications/microchip/xc8/v1.35/sources/common/ftmul.c
+"62 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftmul.c
 [v ___ftmul __ftmul `(f  1 e 3 0 ]
-"20 /Applications/microchip/xc8/v1.35/sources/common/ftsub.c
+"20 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 3 0 ]
-"10 /Applications/microchip/xc8/v1.35/sources/common/sprcadd.c
+"10 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 3 0 ]
 "245
 [v ___flsub __flsub `(d  1 e 3 0 ]
-"11 /Applications/microchip/xc8/v1.35/sources/common/sprcdiv.c
+"11 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 3 0 ]
-"8 /Applications/microchip/xc8/v1.35/sources/common/sprcmul.c
+"8 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 3 0 ]
-"15 /Applications/microchip/xc8/v1.35/sources/common/Umul32.c
+"15 C:\Program Files (x86)\Microchip\xc8\v1.35\sources\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
-"66 /Users/zihaolu/Downloads/CAN_test_SJ.X/ECAN_P18.c
+"66 D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
 [v _InitECAN InitECAN `(v  1 e 0 0 ]
-"62 /Users/zihaolu/Downloads/CAN_test_SJ.X/main.c
+"62 D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
 [v _main main `(v  1 e 0 0 ]
 "83
 [v _InitDevice InitDevice `(v  1 e 0 0 ]
@@ -35,7 +35,7 @@
 [v _Delay Delay `(v  1 e 0 0 ]
 "154
 [v _Heartbeat Heartbeat `(v  1 e 0 0 ]
-"5139 /Applications/microchip/xc8/v1.35/include/pic18f2480.h
+"5139 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f2480.h
 [v _RXFCON0 RXFCON0 `VEuc  1 e 1 @3540 ]
 "5200
 [v _RXFCON1 RXFCON1 `VEuc  1 e 1 @3541 ]
@@ -513,7 +513,7 @@
 "36853
 "36853
 [v _RXB1IF RXB1IF `VEb  1 e 0 @32033 ]
-"45 /Users/zihaolu/Downloads/CAN_test_SJ.X/ECAN_P18.c
+"45 D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
 [v _temp_EIDH temp_EIDH `uc  1 e 1 0 ]
 "46
 [v _temp_EIDL temp_EIDL `uc  1 e 1 0 ]
@@ -539,7 +539,7 @@
 [v _temp_D6 temp_D6 `uc  1 e 1 0 ]
 "57
 [v _temp_D7 temp_D7 `uc  1 e 1 0 ]
-"52 /Users/zihaolu/Downloads/CAN_test_SJ.X/main.c
+"52 D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
 [v _CAN_TX_Adress_H CAN_TX_Adress_H `uc  1 e 1 0 ]
 [v _CAN_TX_Adress_L CAN_TX_Adress_L `uc  1 e 1 0 ]
 "54
@@ -554,12 +554,12 @@
 {
 "102
 } 0
-"66 /Users/zihaolu/Downloads/CAN_test_SJ.X/ECAN_P18.c
+"66 D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\ECAN_P18.c
 [v _InitECAN InitECAN `(v  1 e 0 0 ]
 {
 "153
 } 0
-"154 /Users/zihaolu/Downloads/CAN_test_SJ.X/main.c
+"154 D:\Fall 2015\Modbot v2\ece-can-bus\CAN_test_SJ.X\main.c
 [v _Heartbeat Heartbeat `(v  1 e 0 0 ]
 {
 "166

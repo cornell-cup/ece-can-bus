@@ -27,8 +27,8 @@
 *                             Defines 
 *
 *********************************************************************/
-#define TRUE    1
-#define FALSE   0
+#define TRUE        1
+#define FALSE       0
 #define DEVICE_OSC  8
 #define ONE_MS      (unsigned int)(DEVICE_OSC/4)*80
 

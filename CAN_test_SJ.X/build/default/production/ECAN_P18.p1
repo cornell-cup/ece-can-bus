@@ -1,5 +1,5 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"27382 /Applications/microchip/xc8/v1.35/include/pic18f2480.h
+"27382 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f2480.h
 [v _CANCON `Vuc ~T0 @X0 0 e@3951 ]
 "27274
 [v _CANSTAT `Vuc ~T0 @X0 0 e@3950 ]
@@ -299,7 +299,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic18f2480.h: 49: extern volatile unsigned char RXF6SIDH @ 0xD60;
-"51 /Applications/microchip/xc8/v1.35/include/pic18f2480.h
+"51 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f2480.h
 [; ;pic18f2480.h: 51: asm("RXF6SIDH equ 0D60h");
 [; <" RXF6SIDH equ 0D60h ;# ">
 [; ;pic18f2480.h: 54: typedef union {
@@ -14613,12 +14613,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ECAN_P18.c: 146: CANCON = 0x00;
 "146
 [e = _CANCON -> -> 0 `i `uc ]
-[; ;ECAN_P18.c: 147: while((0x07 << 5)==0x00);
+[; ;ECAN_P18.c: 147: while (CANSTAT & (0x07 << 5) != (0x00 << 5));
 "147
 [e $U 2072  ]
 [e :U 2073 ]
 [e :U 2072 ]
-[e $ == << -> 7 `i -> 5 `i -> 0 `i 2073  ]
+[e $ != & -> _CANSTAT `i -> != << -> 7 `i -> 5 `i << -> 0 `i -> 5 `i `i -> 0 `i 2073  ]
 [e :U 2074 ]
 [; ;ECAN_P18.c: 150: RXB0CON = 0x00;
 "150

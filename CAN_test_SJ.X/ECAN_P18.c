@@ -144,7 +144,7 @@ void InitECAN(void)
 //-------------------------------------------------------------------   
     // REQOP<2:0> = 000
     CANCON = 0x00;
-    while(CANSTAT_OPMODE==0x00);
+    while (CANSTAT & CANSTAT_OPMODE != OPMODE_NORMAL);
     
     // Set Receive Mode for buffers
     RXB0CON = 0x00;
