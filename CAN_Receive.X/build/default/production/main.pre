@@ -18070,6 +18070,7 @@ printf("Hello from Cornell Cup!\n\r");
 while(1) {
 if (ECAN_Receive()){
 
+printf("Receive ADDR = %X\n\r", (temp_SIDH << 3)| (temp_SIDL >> 5));
 printf("Data received: %d byte(s),  ", temp_DLC);
 printf("Temperature = %d Fahrenheit\n\r", temp_D0);
 }
@@ -18080,11 +18081,11 @@ else{
 }
 }
 
-# 99
+# 100
 void InitDevice(void)
 {
 
-# 103
+# 104
 OSCCONbits.IRCF = 7;
 OSCTUNEbits.PLLEN = 0;
 
@@ -18109,7 +18110,7 @@ InitUART();
 InitECAN();
 }
 
-# 132
+# 133
 void ECAN_Transmit(void)
 {
 
@@ -18146,7 +18147,7 @@ TXB0CONbits.TXREQ = 1;
 
 }
 
-# 173
+# 174
 void Delay(unsigned int count)
 {
 

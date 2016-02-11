@@ -15,6 +15,7 @@
 *
 *********************************************************************/
 #include <p18f2480.h>
+#include "config.h"
 #include <xc.h>
 #include "ECAN.h"
 
@@ -38,21 +39,6 @@
 *                            Global Variables 
 *
 *********************************************************************/
-//unsigned char temp_EIDH;
-//unsigned char temp_EIDL;
-//unsigned char temp_SIDH;
-//unsigned char temp_SIDL;
-//unsigned char temp_DLC;
-//unsigned char temp_D0;
-//unsigned char temp_D1;
-//unsigned char temp_D2;
-//unsigned char temp_D3;
-//unsigned char temp_D4;
-//unsigned char temp_D5;
-//unsigned char temp_D6;
-//unsigned char temp_D7;
-
-
 
 
 /*********************************************************************
@@ -118,10 +104,7 @@ void InitECAN(void)
     RXM1SIDH = 0xFF;
     RXM1SIDL = 0xE0;
     
-    // Enable Filters
-    //  Only using two filters
-    RXFCON0 = 0x00;     //Disable all 
-    RXFCON1 = 0x00;     //Disable all
+
     
     // Initialize Receive Filters
     //  Filter 0 = 0x196
@@ -129,16 +112,18 @@ void InitECAN(void)
    
     RXF0EIDH = 0x00;
     RXF0EIDL = 0x00;
-    RXF0SIDH = 0x55;
-    RXF0SIDL = 0xC0;
-    RXF2EIDH = 0x00;
-    RXF2EIDL = 0x00;
-    RXF2SIDH = 0x33;
-    RXF2SIDL = 0xC0;
+    RXF0SIDH = 0x00;
+    RXF0SIDL = 0x20;
+    
+    RXF1EIDH = 0x00;
+    RXF1EIDL = 0x00;
+    RXF1SIDH = 0x00;
+    RXF1SIDL = 0x40;
+    
     
     // Set Receive Mode for buffers
-    RXB0CON = 0x60;
-    RXB1CON = 0x60;    
+    RXB0CON = 0x20;
+    RXB1CON = 0x20;
     
  //-------------------------------------------------------------------
 // Step 6: Enter CAN module into normal mode

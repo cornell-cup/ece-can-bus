@@ -17840,6 +17840,56 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
+
+# 44 "config.h"
+#pragma config OSC = IRCIO67
+#pragma config FCMEN = OFF
+#pragma config IESO = OFF
+
+
+#pragma config PWRT = ON
+#pragma config BOREN = OFF
+#pragma config BORV = 0
+
+
+#pragma config WDT = OFF
+#pragma config WDTPS = 32768
+
+
+#pragma config PBADEN = OFF
+#pragma config LPT1OSC = OFF
+#pragma config MCLRE = OFF
+
+
+#pragma config STVREN = ON
+#pragma config LVP = ON
+#pragma config BBSIZ = 1024
+#pragma config XINST = OFF
+
+
+#pragma config CP0 = OFF
+#pragma config CP1 = OFF
+
+
+#pragma config CPB = OFF
+#pragma config CPD = OFF
+
+
+#pragma config WRT0 = OFF
+#pragma config WRT1 = OFF
+
+
+#pragma config WRTC = OFF
+#pragma config WRTB = OFF
+#pragma config WRTD = OFF
+
+
+#pragma config EBTR0 = OFF
+#pragma config EBTR1 = OFF
+
+
+#pragma config EBTRB = OFF
+
 # 73 "ECAN.h"
 unsigned char temp_EIDH;
 unsigned char temp_EIDL;
@@ -17862,7 +17912,7 @@ unsigned char ECAN_Receive(void);
 
 void ECAN_Transmit(void);
 
-# 63 "ECAN_P18.c"
+# 49 "ECAN_P18.c"
 void InitECAN(void)
 {
 
@@ -17874,25 +17924,25 @@ CANCON = 0x80;
 
 while (CANSTAT & (0x07 << 5) != (0x04 << 5));
 
-# 78
+# 64
 ECANCON = 0x00;
 
-# 84
+# 70
 CIOCONbits.ENDRHI = 1;
 
 
 CIOCONbits.CANCAP = 0;
 
-# 96
+# 82
 BRGCON1 = 0xC0;
 
-# 98
+# 84
 BRGCON2 = 0x80;
 
-# 100
+# 86
 BRGCON3 = 0x05;
 
-# 110
+# 96
 RXM0EIDH = 0x00;
 RXM0EIDL = 0x00;
 RXM0SIDH = 0xFF;
@@ -17904,26 +17954,23 @@ RXM1EIDL = 0x00;
 RXM1SIDH = 0xFF;
 RXM1SIDL = 0xE0;
 
-
-
-RXFCON0 = 0x00;
-RXFCON1 = 0x00;
-
-# 130
+# 113
 RXF0EIDH = 0x00;
 RXF0EIDL = 0x00;
-RXF0SIDH = 0x55;
-RXF0SIDL = 0xC0;
-RXF2EIDH = 0x00;
-RXF2EIDL = 0x00;
-RXF2SIDH = 0x33;
-RXF2SIDL = 0xC0;
+RXF0SIDH = 0x00;
+RXF0SIDL = 0x20;
+
+RXF1EIDH = 0x00;
+RXF1EIDL = 0x00;
+RXF1SIDH = 0x00;
+RXF1SIDL = 0x40;
 
 
-RXB0CON = 0x60;
-RXB1CON = 0x60;
 
-# 147
+RXB0CON = 0x20;
+RXB1CON = 0x20;
+
+# 132
 CANCON = 0x00;
 while (CANSTAT & (0x07 << 5) != (0x00 << 5));
 
@@ -17931,7 +17978,7 @@ while (CANSTAT & (0x07 << 5) != (0x00 << 5));
 
 }
 
-# 159
+# 144
 unsigned char ECAN_Receive(void)
 {
 unsigned char RXMsgFlag;

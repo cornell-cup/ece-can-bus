@@ -14612,216 +14612,220 @@ Version 3.2 HI-TECH Software Intermediate Code
 "81
 [e $ ! != -> ( _ECAN_Receive ..  `i -> -> -> 0 `i `uc `i 2077  ]
 {
-[; ;main.c: 83: printf("Data received: %d byte(s),  ", temp_DLC);
+[; ;main.c: 83: printf("Receive ADDR = %X\n\r", (temp_SIDH << 3)| (temp_SIDL >> 5));
 "83
-[e ( _printf , (. :s 3C -> _temp_DLC `i ]
-[; ;main.c: 84: printf("Temperature = %d Fahrenheit\n\r", temp_D0);
+[e ( _printf , (. :s 3C | << -> _temp_SIDH `i -> 3 `i >> -> _temp_SIDL `i -> 5 `i ]
+[; ;main.c: 84: printf("Data received: %d byte(s),  ", temp_DLC);
 "84
-[e ( _printf , (. :s 4C -> _temp_D0 `i ]
+[e ( _printf , (. :s 4C -> _temp_DLC `i ]
+[; ;main.c: 85: printf("Temperature = %d Fahrenheit\n\r", temp_D0);
 "85
-}
-[; ;main.c: 85: }
-[e $U 2078  ]
+[e ( _printf , (. :s 5C -> _temp_D0 `i ]
 "86
+}
+[; ;main.c: 86: }
+[e $U 2078  ]
+"87
 [e :U 2077 ]
-[; ;main.c: 86: else{
+[; ;main.c: 87: else{
 {
-"88
+"89
 }
 [e :U 2078 ]
-"90
+"91
 }
 [e :U 2074 ]
 "80
 [e $U 2075  ]
 [e :U 2076 ]
-[; ;main.c: 88: }
-[; ;main.c: 90: }
+[; ;main.c: 89: }
 [; ;main.c: 91: }
-"91
+[; ;main.c: 92: }
+"92
 [e :UE 2073 ]
 }
-"99
-[v _InitDevice `(v ~T0 @X0 1 ef ]
 "100
+[v _InitDevice `(v ~T0 @X0 1 ef ]
+"101
 {
-[; ;main.c: 99: void InitDevice(void)
-[; ;main.c: 100: {
+[; ;main.c: 100: void InitDevice(void)
+[; ;main.c: 101: {
 [e :U _InitDevice ]
 [f ]
-[; ;main.c: 103: OSCCONbits.IRCF = 7;
-"103
-[e = . . _OSCCONbits 0 3 -> -> 7 `i `uc ]
-[; ;main.c: 104: OSCTUNEbits.PLLEN = 0;
+[; ;main.c: 104: OSCCONbits.IRCF = 7;
 "104
+[e = . . _OSCCONbits 0 3 -> -> 7 `i `uc ]
+[; ;main.c: 105: OSCTUNEbits.PLLEN = 0;
+"105
 [e = . . _OSCTUNEbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 107: heartbeatCount = 0;
-"107
+[; ;main.c: 108: heartbeatCount = 0;
+"108
 [e = _heartbeatCount -> -> 0 `i `ui ]
-[; ;main.c: 110: ADCON1bits.PCFG = 0xF;
-"110
+[; ;main.c: 111: ADCON1bits.PCFG = 0xF;
+"111
 [e = . . _ADCON1bits 0 0 -> -> 15 `i `uc ]
-[; ;main.c: 113: TRISAbits.TRISA0 = 1;
-"113
+[; ;main.c: 114: TRISAbits.TRISA0 = 1;
+"114
 [e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
-[; ;main.c: 116: TRISBbits.TRISB2 = 0;
-"116
-[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 117: TRISBbits.TRISB3 = 1;
+[; ;main.c: 117: TRISBbits.TRISB2 = 0;
 "117
+[e = . . _TRISBbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 118: TRISBbits.TRISB3 = 1;
+"118
 [e = . . _TRISBbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 121: InitUART();
-"121
+[; ;main.c: 122: InitUART();
+"122
 [e ( _InitUART ..  ]
-[; ;main.c: 124: InitECAN();
-"124
-[e ( _InitECAN ..  ]
-[; ;main.c: 125: }
+[; ;main.c: 125: InitECAN();
 "125
+[e ( _InitECAN ..  ]
+[; ;main.c: 126: }
+"126
 [e :UE 2079 ]
 }
-"132
-[v _ECAN_Transmit `(v ~T0 @X0 1 ef ]
 "133
+[v _ECAN_Transmit `(v ~T0 @X0 1 ef ]
+"134
 {
-[; ;main.c: 132: void ECAN_Transmit(void)
-[; ;main.c: 133: {
+[; ;main.c: 133: void ECAN_Transmit(void)
+[; ;main.c: 134: {
 [e :U _ECAN_Transmit ]
 [f ]
-[; ;main.c: 135: TXB0EIDH = 0x00;
-"135
-[e = _TXB0EIDH -> -> 0 `i `uc ]
-[; ;main.c: 136: TXB0EIDL = 0x00;
+[; ;main.c: 136: TXB0EIDH = 0x00;
 "136
-[e = _TXB0EIDL -> -> 0 `i `uc ]
-[; ;main.c: 137: TXB0SIDH = 0x55;
+[e = _TXB0EIDH -> -> 0 `i `uc ]
+[; ;main.c: 137: TXB0EIDL = 0x00;
 "137
-[e = _TXB0SIDH -> -> 85 `i `uc ]
-[; ;main.c: 138: TXB0SIDL = 0x00;
+[e = _TXB0EIDL -> -> 0 `i `uc ]
+[; ;main.c: 138: TXB0SIDH = 0x55;
 "138
+[e = _TXB0SIDH -> -> 85 `i `uc ]
+[; ;main.c: 139: TXB0SIDL = 0x00;
+"139
 [e = _TXB0SIDL -> -> 0 `i `uc ]
-[; ;main.c: 141: CAN_TX_Adress_H = 0x32;
-"141
-[e = _CAN_TX_Adress_H -> -> 50 `i `uc ]
-[; ;main.c: 142: CAN_TX_Adress_L = 0xC0;
+[; ;main.c: 142: CAN_TX_Adress_H = 0x32;
 "142
+[e = _CAN_TX_Adress_H -> -> 50 `i `uc ]
+[; ;main.c: 143: CAN_TX_Adress_L = 0xC0;
+"143
 [e = _CAN_TX_Adress_L -> -> 192 `i `uc ]
-[; ;main.c: 146: TXB0CONbits.TXREQ = 0;
-"146
+[; ;main.c: 147: TXB0CONbits.TXREQ = 0;
+"147
 [e = . . _TXB0CONbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 151: TXB0DLC = 0x01;
-"151
+[; ;main.c: 152: TXB0DLC = 0x01;
+"152
 [e = _TXB0DLC -> -> 1 `i `uc ]
-[; ;main.c: 153: TXB0D0=0X55;
-"153
+[; ;main.c: 154: TXB0D0=0X55;
+"154
 [e = _TXB0D0 -> -> 85 `i `uc ]
-[; ;main.c: 156: TXB0D1=0XAA;
-"156
-[e = _TXB0D1 -> -> 170 `i `uc ]
-[; ;main.c: 157: TXB0D2=0X02;
+[; ;main.c: 157: TXB0D1=0XAA;
 "157
-[e = _TXB0D2 -> -> 2 `i `uc ]
-[; ;main.c: 158: TXB0D3=0X03;
+[e = _TXB0D1 -> -> 170 `i `uc ]
+[; ;main.c: 158: TXB0D2=0X02;
 "158
-[e = _TXB0D3 -> -> 3 `i `uc ]
-[; ;main.c: 159: TXB0D4=0X04;
+[e = _TXB0D2 -> -> 2 `i `uc ]
+[; ;main.c: 159: TXB0D3=0X03;
 "159
-[e = _TXB0D4 -> -> 4 `i `uc ]
-[; ;main.c: 160: TXB0D5=0X05;
+[e = _TXB0D3 -> -> 3 `i `uc ]
+[; ;main.c: 160: TXB0D4=0X04;
 "160
-[e = _TXB0D5 -> -> 5 `i `uc ]
-[; ;main.c: 161: TXB0D6=0X06;
+[e = _TXB0D4 -> -> 4 `i `uc ]
+[; ;main.c: 161: TXB0D5=0X05;
 "161
-[e = _TXB0D6 -> -> 6 `i `uc ]
-[; ;main.c: 162: TXB0D7=0X07;
+[e = _TXB0D5 -> -> 5 `i `uc ]
+[; ;main.c: 162: TXB0D6=0X06;
 "162
+[e = _TXB0D6 -> -> 6 `i `uc ]
+[; ;main.c: 163: TXB0D7=0X07;
+"163
 [e = _TXB0D7 -> -> 7 `i `uc ]
-[; ;main.c: 164: TXB0CONbits.TXREQ = 1;
-"164
+[; ;main.c: 165: TXB0CONbits.TXREQ = 1;
+"165
 [e = . . _TXB0CONbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 166: }
-"166
+[; ;main.c: 167: }
+"167
 [e :UE 2080 ]
 }
-"173
+"174
 [v _Delay `(v ~T0 @X0 1 ef1`ui ]
-"174
+"175
 {
-[; ;main.c: 173: void Delay(unsigned int count)
-[; ;main.c: 174: {
+[; ;main.c: 174: void Delay(unsigned int count)
+[; ;main.c: 175: {
 [e :U _Delay ]
-"173
-[v _count `ui ~T0 @X0 1 r1 ]
 "174
+[v _count `ui ~T0 @X0 1 r1 ]
+"175
 [f ]
-[; ;main.c: 176: while(count--);
-"176
+[; ;main.c: 177: while(count--);
+"177
 [e $U 2082  ]
 [e :U 2083 ]
 [e :U 2082 ]
 [e $ != -- _count -> -> 1 `i `ui -> -> 0 `i `ui 2083  ]
 [e :U 2084 ]
-[; ;main.c: 177: }
-"177
+[; ;main.c: 178: }
+"178
 [e :UE 2081 ]
 }
-"179
+"180
 [v _InitUART `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 179: void InitUART(void){
+[; ;main.c: 180: void InitUART(void){
 [e :U _InitUART ]
 [f ]
-[; ;main.c: 181: TRISCbits.TRISC6 = 0;
-"181
+[; ;main.c: 182: TRISCbits.TRISC6 = 0;
+"182
 [e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
-[; ;main.c: 183: BAUDCONbits.BRG16 = 0;
-"183
+[; ;main.c: 184: BAUDCONbits.BRG16 = 0;
+"184
 [e = . . _BAUDCONbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 185: SPBRG = 12;
-"185
+[; ;main.c: 186: SPBRG = 12;
+"186
 [e = _SPBRG -> -> 12 `i `uc ]
-[; ;main.c: 188: TXSTAbits.TX9 = 0;
-"188
-[e = . . _TXSTAbits 0 6 -> -> 0 `i `uc ]
-[; ;main.c: 189: TXSTAbits.TXEN = 1;
+[; ;main.c: 189: TXSTAbits.TX9 = 0;
 "189
-[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
-[; ;main.c: 190: TXSTAbits.SYNC = 0;
+[e = . . _TXSTAbits 0 6 -> -> 0 `i `uc ]
+[; ;main.c: 190: TXSTAbits.TXEN = 1;
 "190
-[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 191: TXSTAbits.BRGH = 0;
+[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
+[; ;main.c: 191: TXSTAbits.SYNC = 0;
 "191
+[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 192: TXSTAbits.BRGH = 0;
+"192
 [e = . . _TXSTAbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 193: RCSTAbits.SPEN = 1;
-"193
+[; ;main.c: 194: RCSTAbits.SPEN = 1;
+"194
 [e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
-[; ;main.c: 195: }
-"195
+[; ;main.c: 196: }
+"196
 [e :UE 2085 ]
 }
-"197
+"198
 [v _putch `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;main.c: 197: void putch(unsigned char byte){
+[; ;main.c: 198: void putch(unsigned char byte){
 [e :U _putch ]
 [v _byte `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;main.c: 198: TXREG = byte;
-"198
-[e = _TXREG _byte ]
-[; ;main.c: 199: while (TXSTAbits.TRMT == 0);
+[; ;main.c: 199: TXREG = byte;
 "199
+[e = _TXREG _byte ]
+[; ;main.c: 200: while (TXSTAbits.TRMT == 0);
+"200
 [e $U 2087  ]
 [e :U 2088 ]
 [e :U 2087 ]
 [e $ == -> . . _TXSTAbits 0 1 `i -> 0 `i 2088  ]
 [e :U 2089 ]
-[; ;main.c: 200: }
-"200
+[; ;main.c: 201: }
+"201
 [e :UE 2086 ]
 }
-[p f _printf 8388736 ]
+[p f _printf 10485888 ]
 [a 1C 27 91 50 74 0 ]
-[a 3C 68 97 116 97 32 114 101 99 101 105 118 101 100 58 32 37 100 32 98 121 116 101 40 115 41 44 32 32 0 ]
-[a 4C 84 101 109 112 101 114 97 116 117 114 101 32 61 32 37 100 32 70 97 104 114 101 110 104 101 105 116 10 13 0 ]
+[a 4C 68 97 116 97 32 114 101 99 101 105 118 101 100 58 32 37 100 32 98 121 116 101 40 115 41 44 32 32 0 ]
+[a 5C 84 101 109 112 101 114 97 116 117 114 101 32 61 32 37 100 32 70 97 104 114 101 110 104 101 105 116 10 13 0 ]
+[a 3C 82 101 99 101 105 118 101 32 65 68 68 82 32 61 32 37 88 10 13 0 ]
 [a 2C 72 101 108 108 111 32 102 114 111 109 32 67 111 114 110 101 108 108 32 67 117 112 33 10 13 0 ]

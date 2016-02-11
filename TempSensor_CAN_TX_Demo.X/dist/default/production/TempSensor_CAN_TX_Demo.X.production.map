@@ -5,7 +5,7 @@ Linker command line:
 --edf=C:\Program Files (x86)\Microchip\xc8\v1.35\dat\en_msgs.txt -cs \
   -h+dist/default/production\TempSensor_CAN_TX_Demo.X.production.sym \
   --cmf=dist/default/production\TempSensor_CAN_TX_Demo.X.production.cmf -z \
-  -Q18F2480 -oC:\Users\CORNEL~1\AppData\Local\Temp\s3v8.2 \
+  -Q18F2480 -oC:\Users\CORNEL~1\AppData\Local\Temp\s630.2 \
   -Mdist/default/production/TempSensor_CAN_TX_Demo.X.production.map -E1 \
   -ver=XC8 -ASTACK=060h-02ffh -pstack=STACK -ACODE=00h-03FFFh \
   -ACONST=00h-03FFFh -ASMALLCONST=0300h-03FFhx61 -AMEDIUMCONST=0300h-03FFFh \
@@ -21,7 +21,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\CORNEL~1\AppData\Local\Temp\s3v8.obj \
+  C:\Users\CORNEL~1\AppData\Local\Temp\s630.obj \
   dist/default/production\TempSensor_CAN_TX_Demo.X.production.obj 
 
 Object code version is 3.11
@@ -34,7 +34,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\CORNEL~1\AppData\Local\Temp\s3v8.obj
+C:\Users\CORNEL~1\AppData\Local\Temp\s630.obj
                 end_init                              0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
                 config                           300000   300000        E   300000       0

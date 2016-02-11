@@ -80,6 +80,7 @@ void main(void)
     while(1) {
         if (ECAN_Receive()){
             // new data received
+            printf("Receive ADDR = %X\n\r", (temp_SIDH << 3)| (temp_SIDL >> 5));
             printf("Data received: %d byte(s),  ", temp_DLC);
             printf("Temperature = %d Fahrenheit\n\r", temp_D0);
         }
